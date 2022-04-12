@@ -15,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains
 import pandas as pd 
 
-DRIVER_PATH = '../chromedriver'
+DRIVER_PATH = '../driver/linux/chromedriver_linux64/chromedriver'
       # Task 1.1: Open Chrome and Access Linkedin login site
 driver = webdriver.Chrome(executable_path=DRIVER_PATH)
 driver.maximize_window()
@@ -65,19 +65,21 @@ def search(key=''):
 
       # Task 2.3: Search
       search_field.send_keys(Keys.RETURN)
-      sleep(4)
+      sleep(3)                                                 
       try:
-            sell_full_result = driver.find_element_by_xpath('//*[@id="main"]/div/div/div[1]/div[2]')
-            sell_full_result.click()
-      except:
-            pass
-
+            # sell_full_result = driver.find_element_by_xpath('//*[@id="main"]/div/div/div[1]/div[2]')
+            sell_full_result = driver.find_element_by_css_selector('#main > div > div > div:nth-child(1) > div.search-results__cluster-bottom-banner.artdeco-button.artdeco-button--tertiary.artdeco-button--muted > a')
+            sell_full_result.click()                                #main > div > div > div:nth-child(2) > div.search-results__cluster-bottom-banner.artdeco-button.artdeco-button--tertiary.artdeco-button--muted > a
+      except:                                                       #main > div > div > div:nth-child(1) > div.search-results__cluster-bottom-banner.artdeco-button.artdeco-button--tertiary.artdeco-button--muted > a     
+            print("CANNOT CLICK")                                   #main > div > div > div:nth-child(1) > div.search-results__cluster-bottom-banner.artdeco-button.artdeco-button--tertiary.artdeco-button--muted > a
+            pass                                                    #main > div > div > div:nth-child(2) > div.search-results__cluster-bottom-banner.artdeco-button.artdeco-button--tertiary.artdeco-button--muted > a
+                                                                    #main > div > div > div:nth-child(1) > div.search-results__cluster-bottom-banner.artdeco-button.artdeco-button--tertiary.artdeco-button--muted > a  
 
 # print('- Finish Task 2: Search for profiles')
 
 
 def GetURL(key=''):
-      sleep(2)
+      sleep(4)
       for i in range(10):
             x = 500*i
             driver.execute_script("document.getElementsByClassName('jobs-search-results-list')[0].scrollTo(0,{});".format(x))
@@ -129,12 +131,11 @@ def main():
             search(item)
             sleep(3)
             url_jobs = FullURL(item)
-            
+
             import pandas as pd 
             df = pd.DataFrame(url_jobs)
             output_result = './jobs_result/' + item + '.csv'
             df.to_csv(output_result,mode='a', header=False)
-
-            driver.get('https://www.linkedin.com/feed/')
+            driver.get('https://www.linkedin.com')
 
 main()
