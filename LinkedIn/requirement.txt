@@ -3,3 +3,4 @@ selenium
 requests
 pandas
 numpy
+chardet

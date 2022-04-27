@@ -15,7 +15,8 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.action_chains import ActionChains
 import pandas as pd 
 
-DRIVER_PATH = '../driver/linux/chromedriver_linux64/chromedriver'
+# DRIVER_PATH = '../driver/linux/chromedriver_linux64/chromedriver'
+DRIVER_PATH = '../driver/mac/chromedriver'
       # Task 1.1: Open Chrome and Access Linkedin login site
 driver = webdriver.Chrome(executable_path=DRIVER_PATH)
 driver.maximize_window()

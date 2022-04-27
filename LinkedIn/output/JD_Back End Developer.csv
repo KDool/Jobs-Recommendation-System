@@ -1,0 +1,635 @@
+id|jobTitle|location|company|type|description
+3008981684|Back End Developer|Ho Chi Minh City, Vietnam|Sendo.vn|Full-time|"About the job
+Job description
+Write scalable, robust, testable, efficient, and easily maintainable code.
+Write document, review code and support technical for junior members.
+Collaborate to R&D, System, Product, Seller teams to build or maintain Sendo’s products.
+Working in squad Account to improve Sign in/up flow, User Authentication, Authorization, User Segmentation to help improve buyers & sellers experience
+Requirement
+Have knowledge in the following technologies: Linux, Docker, Kubernetes, Nginx, Git, Jenkins
+Experience with one or more general purpose programming languages, including but not limited to: Golang (preferred)/Nodejs/PHP/.NET/Java
+Experience working on both relational and non-relational databases (MySQL, MongoDB) and comfortable with writing and maintaining performant SQL queries.
+Experience working on Redis for caching/speeding up apps performance.
+Excellent working attitude, problem solving skill, critical thinking, and communication skill.
+Previous success developing and shipping a large-scale application with a user-empathetic mindset
+Enjoy technical challenges and are eager to explore new technologies
+Benefit
+Competitive salary and benefits including extra medical insurance.
+13th month salary
+Attractive performance bonus
+Opportunity to become Sendo’s shareholder through ESOP plan
+Annual company trips and team buildings
+Gifts on birthday, Tet and Holidays
+Sport and social clubs
+Opportunities for both technical and soft skill training
+Annual performance review for salary raise and promotion
+
+For more information, please comment or send an inbox message or send your #CV via email: YenLTH@sendo.vn."
+2756860056|Back End Developer|Hanoi, Hanoi, Vietnam|Kyber Network|Full-time|"About the job
+Mô tả công việc
+
+Kyber Network đang tìm kiếm 03 Backend Developer có kinh nghiệm thiết kế hệ thống backend high performance, có thế mạnh và mong muốn làm việc về giải thuật/logic để gia nhập team Kyber Trading, làm việc tại văn phòng Kyber Hà Nội.
+
+Kyber Trading là team đằng sau tạo nên khả năng thanh khoản dồi dào cho hệ thống sản phẩm của Kyber là Kyber Network, KyberSwap… Vị trí Backend Developer sẽ làm việc cùng các thành viên team này (ở Việt Nam và nước ngoài), báo cáo trực tiếp cho Algorithm Team Lead ở văn phòng Hà Nội. Công việc chính là làm phần backend thuật toán giao dịch cho hệ thống mua bán cryptocurrency của Kyber.
+Cụ thể mô tả công việc như sau:
+Code phát triển hệ thống backend, sử dụng các ngôn ngữ như Golang, Python (hiện team đang dùng) hoặc có thể chuyển đổi từ ngôn ngữ khác. Deploy code trên server test và production.
+Viết application để đọc và xử lý dữ liệu từ các nguồn thông tin khác qua API, websocket…
+Làm Docker, Linux, gRPC, database (MySQL, Postgres), API, continuous integration
+Đọc/hiểu các bài báo/nghiên cứu khoa học liên quan để đưa ra giải pháp cũng như cài đặt giải pháp đó trong code base
+Tham gia vào cấu trúc chung của hệ thống trên môi trường blockchain, các sàn giao dịch
+Nghiên cứu, tìm hiểu, thảo luận, tranh biện, đưa ra các ý tưởng phát triển team Trading theo định hướng chung.
+Yêu cầu công việc
+Yêu cầu bắt buộc
+Có kinh nghiệm trên 3 năm phát triển dự án ở vai trò Backend Developer, có kỹ năng thiết kế hệ thống, xây dựng API server.
+Có tư duy logic, thuật toán tốt, cấu trúc dữ liệu giải thuật tốt, thích làm việc sâu về mảng này.
+Có 4 kỹ năng tiếng Anh khá và tốt trở lên (để giao tiếp, làm việc trực tiếp với team nước ngoài nói tiếng Anh, đọc hiểu sâu các bài báo/nghiên cứu bằng tiếng Anh…)
+Code clean & clear (sạch sẽ, rõ ràng, dễ đọc hiểu)
+Có tư duy sáng tạo khi nghiên cứu giải pháp để giải quyết vấn đề, think-out-of-the-box
+Sở hữu tinh thần làm việc của startup: chủ động, chịu khó học hỏi, tự chịu trách nhiệm trong công việc, có mindset của người-giải-quyết-vấn-đề
+Có kỹ năng làm việc nhóm tốt, hỗ trợ đồng nghiệp cùng/khác team.
+Yêu cầu không bắt buộc
+Ưu tiên ứng viên đã có kinh nghiệm trading và yêu thích cryptocurrency, blockchain để bắt nhịp nhanh hơn với công việc
+Ưu tiên ứng viên đã có kinh nghiệm Golang.
+Ưu tiên các bạn học chuyên toán tin, hoặc đã tham gia/đạt giải lập trình thi đấu (competitive program) trong nước, khu vực hoặc quốc tế
+Ưu tiên ứng viên thích làm việc trong môi trường team nhỏ, tập trung vào nghiên cứu.
+Bạn sẽ được gì khi làm việc tại Kyber Network?
+Lương tháng:
+Mức lương tháng: 1400$ - 3200$
+Thử việc nhận 100% mức lương net như chính thức
+Review lương 1 lần/năm
+Thưởng các dịp lễ tết khác:
+30/4-1/5 và 2/9
+Kỷ niệm 3 năm làm việc
+Quà Tết, Quà Trung thu, Quà đám cưới, Quà sinh con…
+Cơ hội dành riêng cho Nhân viên:
+Tham gia các hoạt động đầu tư nội bộ dành riêng cho Nhân viên
+Được Công ty tài trợ thực hiện dự án startup blockchain riêng trong ngân sách 5 triệu USD
+Cơ hội làm việc với đội ngũ nhân sự chất lượng cao:
+Co-founder có uy tín, trình độ học vấn và kinh nghiệm nghiên cứu phát triển sản phẩm mảng blockchain
+Đội ngũ Nghiên cứu và Lập trình viên có nền tảng học vấn ưu tú, có giải thưởng Toán Tin quốc gia và quốc tế, tốt nghiệp bậc Tiến sĩ, Thạc sĩ, Kỹ sư từ các trường Đại học lớn
+Được sự hỗ trợ giúp đỡ của nhiều chuyên gia tư vấn và đối tác có tiềm lực ở trong nước và nước ngoài
+Đồng nghiệp nói tiếng Anh ở nhiều nước khác nhau: Singapore, Việt Nam, Hy Lạp…
+Cơ hội tạo ra những sản phẩm fintech dài hạn, bền vững và thực tế, phục vụ tầm nhìn của Kyber: Nền kinh tế Phi tập trung cho mọi người (Decentralized Economy for Everyone). Chúng tôi không lãng phí nguồn lực cho những dự án trào lưu nhất thời không hướng tới tầm nhìn này.
+Cơ hội làm việc với blockchain - công nghệ dẫn đầu xu hướng trong hiện tại và tương lai
+Chế độ làm việc linh động, coi trọng hiệu quả công việc:
+Làm việc 9h-18h từ thứ 2-thứ 6
+Không chấm công
+Tự chọn ngày làm việc từ xa hàng tháng
+Ưu tiên làm việc từ xa nếu tình hình dịch bệnh nguy hiểm
+Chế độ nghỉ phép:
+Nghỉ lễ tết, nghỉ phép có lương 12 ngày/năm, nghỉ việc riêng hiếu hỉ: theo quy định chung Nhà nước
+Thêm 2 ngày nghỉ phép có lương/năm: nghỉ sinh nhật, nghỉ để tham gia từ thiện, nghỉ để chăm sóc con cái
+Được nghỉ phép ngay từ thời gian thử việc
+Chế độ bảo hiểm và chăm sóc sức khỏe:
+Bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp: được đóng đủ trên 100% lương ký hợp đồng; khi ốm đau, thai sản hoặc nghỉ việc, nhân viên được hưởng chế độ bồi thường cao từ Bảo hiểm Nhà nước.
+Được tài trợ Bảo hiểm Sức khỏe nâng cao Premium cho Nhân viên và người thân, có thể sử dụng bảo lãnh ở các bệnh viện phòng khám lớn
+Được khám sức khỏe định kỳ hàng năm ở Bệnh viện uy tín
+Môi trường làm việc:
+Thân thiện, đồng nghiệp trẻ, vui, hỗ trợ nhau
+Có nhiều câu lạc bộ sở thích: bóng đá, bóng bàn, cầu lông, chạy bộ, cờ vua, DOTA, PES…
+Điều kiện làm việc:
+Hỗ trợ tối đa 3000$ để mua thiết bị làm việc.
+Không gian văn phòng rộng, đẹp
+Có sẵn hoa quả tươi, đồ ăn nhẹ, đồ uống hàng ngày
+Có phòng ngủ trưa, chăn, gối, đệm
+Có piano và guitar
+Được tặng nhiều đồng phục cao cấp Kyber: áo mùa hè/mùa thu/mùa đông, khẩu trang, tất, giày, ô đi mưa, lót chuột…"
+3003497520|Back End Developer ( Junior - Senior )|Ho Chi Minh City, Vietnam|Wee Digital|Full-time|"About the job
+1.Mô tả công việc
+· Tham gia phát triển các dự án liên quan , làm việc với hệ thống back-end bằng ngôn ngữ Golang
+· Phân tích yêu cầu, thiết kế chi tiết, lập kế hoạch phát triển dự án;
+· Hỗ trợ các thành viên trong nhóm cùng phát triển kỹ năng;
+· Nghiên cứu và ứng dụng các công nghệ mới vào sản phẩm.
+2. Yêu cầu công việc:
+· Tốt nghiệp cao đẳng , đại học liên quan đến ngành Công nghệ thông tin , hệ thống thông tin quản lý…
+· Hiểu biết thành thạo về các công cụ lập phiên bản mã bằng Git.
+· Kỹ năng đọc hiểu tiếng Anh.
+· Sử dụng thành thạo HTTP, API RESPful.
+· Có 1- 2 năm kinh nghiệm sử dụng ngôn ngữ GOLANG."
+2983100486|Back End Developer|Tân Bình, Ho Chi Minh City, Vietnam|WATA|Full-time|"About the job
+WATA is actively looking for Middle/Senior NodeJS Developer candidates to join our dynamic development team. Joining us, you will have a chance to work with our proactive and talented people, and you will have a chance to work directly with our clients from North America, Singapore, Japan, Korea, and Australia.
+
+For more details about JD, pls contact me directly via Skype: live:.cid.cb561ccce0b66a97 (Mie)"
+3008981684|Back End Developer|Ho Chi Minh City, Vietnam|Sendo.vn|Full-time|"About the job
+Job description
+Write scalable, robust, testable, efficient, and easily maintainable code.
+Write document, review code and support technical for junior members.
+Collaborate to R&D, System, Product, Seller teams to build or maintain Sendo’s products.
+Working in squad Account to improve Sign in/up flow, User Authentication, Authorization, User Segmentation to help improve buyers & sellers experience
+Requirement
+Have knowledge in the following technologies: Linux, Docker, Kubernetes, Nginx, Git, Jenkins
+Experience with one or more general purpose programming languages, including but not limited to: Golang (preferred)/Nodejs/PHP/.NET/Java
+Experience working on both relational and non-relational databases (MySQL, MongoDB) and comfortable with writing and maintaining performant SQL queries.
+Experience working on Redis for caching/speeding up apps performance.
+Excellent working attitude, problem solving skill, critical thinking, and communication skill.
+Previous success developing and shipping a large-scale application with a user-empathetic mindset
+Enjoy technical challenges and are eager to explore new technologies
+Benefit
+Competitive salary and benefits including extra medical insurance.
+13th month salary
+Attractive performance bonus
+Opportunity to become Sendo’s shareholder through ESOP plan
+Annual company trips and team buildings
+Gifts on birthday, Tet and Holidays
+Sport and social clubs
+Opportunities for both technical and soft skill training
+Annual performance review for salary raise and promotion
+
+For more information, please comment or send an inbox message or send your #CV via email: YenLTH@sendo.vn."
+2994254043|Back End Developer|Xã Mễ Trì, Hanoi, Vietnam|DZT Corp|Full-time|"About the job
+About the job
+Mô tả công việc:
+
+Lập trình ứng dụng web bằng ngôn ngữ Golang, node.js.
+Phân tích yêu cầu hệ thống, thiết kế hệ thống, thiết kế DB.
+Phối hợp chặt chẽ với nhóm lập trình để công việc hoàn thành đúng thời hạn, thống nhất theo yêucầu dự án.
+
+Yêu cầu:
+
+Tối thiểu 2 năm kinh nghiệm lập trình và thành thạo một trong các ngôn ngữ: Golang, Java, PHP, Python, Node.js.. (Ưu tiên các bạn đã có kinh nghiệm về Golang).
+Có kinh nghiệm làm việc với các hệ quản trị cơ sở dữ liệu như MySQL, PostgreSQL,…
+Có kinh nghiệm về unit test.
+Sử dụng thành thạo Git và gitflow.
+Kỹ năng phân tích và giải quyết vấn đề.
+Kỹ năng giao tiếp tốt, tinh thần trách nhiệm và tỉ mỉ trong công việc.
+
+Chính sách và đãi ngộ:
+
+Lương, thưởng khởi điểm hấp dẫn, tương xứng năng lực
+Thu nhập: 13 tháng lương/năm . Review tăng lương 2 lần/năm
+Tiền thưởng, quà tặng vào các dịp Lễ Tết: Tết dương lịch, Quốc khánh, 30/04 - 01/05,..
+Phụ cấp ăn trưa, gửi xe miễn phí Bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp theo Luật bảo hiểm
+Đồng nghiệp trẻ trung, năng động, luôn hỗ trợ và giúp đỡ nhau
+Khám sức khỏe định kỳ hàng năm
+Môi trường làm việc văn minh, công bằng.
+Các hoạt động của Công ty: Du lịch, sinh nhật, vui chơi giải trí…được tổ chức thường xuyên
+Có lộ trình phát triển nghề nghiệp rõ ràng, được tạo điều kiện để phát triển nghề nghiệp theo năng lực và mong muốn cá nhân
+Được hưởng chế độ đào tạo công ty: nâng cao khả năng chuyên môn, kỹ năng mềm, ngoại ngữ
+Tài trợ các khóa học, lấy chứng chỉ, nâng cao kỹ năng chuyên môn
+Thời gian làm việc: Thứ Hai – Thứ 6, 8:30 – 18:00
+
+Gửi CV về địa chỉ email hr@dztcorp.com"
+2992995558|Back End Developer|Ho Chi Minh City, Vietnam|Axon Active - Agile Offshore Software Development Company|Full-time|"About the job
+Description
+Coming to Axon Active, you will work directly with foreign customers and trendy projects in Fintech, Big Data, Mobile, IoT, BPM, Biotech, Machine Learning, etc. Our Scrum teams are growing in dynamic spirit with teamwork & passion. You will be offered premium benefits and attractive salary. Besides, we are focusing on developing your knowledge, skills and English wherever you work in Ho Chi Minh, Da Nang or Can Tho.
+
+Responsibilities
+Work in Scrum team
+Daily cooperate with Product Owner
+Be involved in planning, estimation, developing and continuously delivering software
+Self-assign tasks and fully be responsible for quality/quantity of delivered result
+Self-determine appropriate architecture, technical solutions.
+Requirements
+Have background in Computer Science/Information Technology or equivalent.
+Have at least 2 years of experience in related positions
+Knowledge in server-side JS such as: Node.js, etc.
+Knowledge in Database /SQL
+Experience with API integration
+Familiar with cloud topics, e.g. AWS or Azure
+Good at English skills and Problem-solving skill
+Familiar with Agile development methodologies is an advantage.
+Why you'll love to work with us
+Benefits
+Competitive salary & 13th salary
+100% salary in probation period
+Working from Home option
+Flexible working hours and up to 18 days off per year
+Fully paid compulsory insurances (Bảo hiểm xã hội, bảo hiểm thất nghiệp, bảo hiểm y tế)
+Annual premium healthcare and 24/24 personal accident insurance (Bảo hiểm sức khỏe và bảo hiểm tai nạn 24/24)
+Additional healthcare insurance for family members
+Annual health check-ups
+Free kindergarten for staff’s kids
+Onsite visit opportunities in Europe, USA or Australia
+Access to licensed Udemy training courses & Axon Active plus frequent internal knowledge exchanges
+Loyalty bonuses (additional annual leaves, travel vouchers)
+Free lunch at the office
+Company trip & other team building activities
+Sponsored sports clubs such as football, badminton, etc.
+More than a thousand useful books, e-books and magazines in our library
+Direct English communication with foreigners and English courses
+Working at Axon Active is more than just a job
+It's the perfect place to inspire your work & life in JOY
+International English speaking, self-development, and growing environment
+A focus on developing your knowledge, skills, and English
+Open, dynamic, and professional Agile environment
+Modern office
+As a professional environment
+We collaborate and provide technical training courses for IT students in all major Universities in HCM City, Da Nang & Can Tho - https://www.axonactive.com/#our-client
+Axon Active is the leading Agile Company in Vietnam
+We are the founder of the most popular Agile event in Vietnam, the monthly Scrum Breakfast - http://scrumbreakfast.vn/
+Axon Active is the organizer of one of the biggest IT events in Vietnam, the DevDay Da Nang - https://devday.org/
+We are ISO/IEC 27001:2013 Certified and Microsoft Gold and Silver Partner
+
+Join the Axon Active Family NOW!
+Just fill out the form below
+Or send us your resume in English to job@axonactive.com
+If you have further question, feel free to contact us
+Tel: +84 28 7109 1234
+Skype: live:vuonghoangyen.nguyen (Ms. Yen)"
+3008544604|Back End Developer|Ho Chi Minh City, Vietnam|Swop|Full-time|"About the job
+[SAIGON- VIETNAM] SWOP.COMPANY
+
+
+
+WE NEED YOU ❤️❤️❤️❤️
+
+#iswop #developersjobs #golang #backend
+
+
+GOLANG BACKEND DEVELOPER
+April 2022
+Who are we looking for?
+SwopCompany is looking for an experienced software engineer to join our team as the Golang Developer. The senior developer’s primary responsibility is to own, maintain, and scale a unique technical ecosystem.
+Primary Responsibilities
+· Design and architect solutions for high level goals and objectives
+· Actively contribute to code-reviews and pull requests
+· Being able to design mobile applications from top to bottom, troubleshooting and fixing tough problems, hitting quick deadlines, and knowing when to push back on requirements
+Job Requirements
+· Minimum Five (5) years of experience in programming in a professional environment
+· GoLang programming expertise (Minimum Three (3) years)
+· Experience in PostgresSQL (Minimum One (1) year)
+· Experience in React Native or ReactJS (Minimum One (1) year)
+· Experience in Docker & AWS (Minimum Three (3) years)
+· Comfortable with working in a startup environment (we’re a small team, we do our best to work as rationally as possible, but we’re not perfect!)
+· Strong problem solving and debugging skills with direct experience within mobile application environments, including monitoring, alerting and distributed tracing for IOS & Android
+· Have a good sense of organization, ability to set expectations and keep working on a
+· timeline, with the ability to document, communicate and explain technology decisions and directions
+Technologies we currently using
+· Deployment to Google Play and App Store
+· Our tech stack: React Native, JavaScript, Go, Docker, PostgreSQL, AWS, Python, SQL, Stripe, Firebase, Miscellaneous third party APIs such as twilio sendgrid, segment, etc.
+· Our app deals with data structures, algorithms, object-oriented software design, and working with cloud-based distributed systems
+Soft Skills/Characteristics We Love
+· Extreme passion for cracking problems efficiently and elegantly
+· Dedication for mentoring & growth of teammates
+· Strong organizational and communication skills, ability to present your ideas to both technical and non-technical audiences
+· Natural tendency to be curious, positive and creative
+· Team player who collaborates well with others
+Location
+· Office : HCMC-D1
+· Time : 9am – 6pm
+Salary and Benefits
+- Competitive compensation
+Kindly send an email to ellie@swop.company for further info
+or via phone at +84939265394
+(Zalo/Viber/Whatsapp/Telegram)
+Thank you 🥰
+Thuy Tien Truong - Ellie
+Operations Manager
+ellie@swop.company
+Phone: +84-939-265-394"
+3012111122|Back End Developer|Ho Chi Minh City, Vietnam|MLTech Soft|Full-time|"About the job
+JOB DESCRIPTION
+Fresher Back-End Developer – Fulltime
+
+MLTech Soft is a technology start-up that transforms bold business ideas into exceptional digital products. After only 2 years in the market, we have consulted, designed, and developed 100+ digital products for startups, small-medium companies, and enterprises. Our products are now used by millions of consumers.
+
+We are looking forward to having you onboard this exciting journey to bring more value to our customers.
+
+Responsibility:
+- Develop the enterprise web application.
+- Join and discuss with the team to find a suitable solution.
+- Define and integrate with the back-end side.
+- Training and improving both technical and soft skills to resolve problems.
+
+Requirement:
+- Have experience in web/app development.
+- Final-year student or fresh graduate less than 2 year of experience, can work full-time.
+- Knowledge of: NodeJs, NestJs or; Python, Django or; PHP Laravel.
+- Familiarity with GIT.
+- Thrive in a fast-paced working environment, own deadlines, and strive for efficiency.
+
+Benefits:
+- 13th-month salary and performance review 2 times/year
+- Annual Company Trip, year-end party, monthly building, etc.
+- Flexible working time
+- Support, coaching, and feedback to develop your skills in the professional working
+environment
+- Hands-on experience on an early-stage startup
+
+How to apply:
+Please send your resume to hoang.tran-huy@mltech.com.vn using the following title before 10/04/2022 : [MLTech - Recruitment] Fresher Back-End Developer - Your Name"
+2987736249|Back End Developer|Hanoi, Hanoi, Vietnam|Hamsa Corporation|Full-time|"About the job
+Job Description
+Phát triển ứng dụng web bằng NodeJS hoặc ReactJS và các công nghệ liên quan.
+Cơ hội làm việc với các khách hàng quốc tế trên khắp thế giới như Anh, Úc, Nhật, Hongkong, Thái Lan,...
+Tích hợp với các nền tảng của bên thứ 3, bao gồm nền tảng truyền thông xã hội, thương mại điện tử, ERP,...
+Your Skills and Experience
+Minimum qualifications:
+Từ 6 tháng kinh nghiệm (Junior) sử dụng NodeJS hoặc ReactJS (chỉ cần biết 1 trong 2, biết cả 2 càng tốt)
+Tiếng Anh ở mức độ đọc hiểu cơ bản.
+Ứng viên chưa có nhiều kinh nghiệm sẽ được đào tạo
+Desired qualifications:
+Có kiến thức về JavaScript, OOP, API
+Có kinh nghiệm về Typescript + ReactJs + NextJs là một điểm cộng.
+Có GitHub profile
+Why You'll Love Working Here
+About your pay:
+Lương tháng từ $700 - $1500
+Hỗ trợ ăn trưa.
+Thu nhập lên đến 15 tháng lương/năm.
+Thưởng cá nhân, thưởng nhóm.
+Được đóng đầy đủ BHXH, BHYT.
+About your job:
+Được thử sức với các dự án đa dạng.
+Cơ hội làm việc với khách hàng từ các nước khác nhau.
+Trở thành một phần của một đội ngũ năng động và đam mê trong công việc.
+Xây dựng mối quan hệ tin tưởng với khách hàng nhờ các giải pháp tối ưu.
+About your manager:
+Với Hamsa, ""sếp"" là người điều phối để định hướng và đào tạo bạn hoàn thành công việc một cách hiệu quả nhất
+Đặt mục tiêu và phản hồi đúng lúc để bạn cải thiện hiệu suất và năng suất
+About your colleagues:
+Trẻ trung, nhiệt huyết, trách nhiệm và chuyên nghiệp
+Hỗ trợ 24/7
+Môi trường làm việc thoải mái như ở nhà
+About your CEO:
+Hướng tới sứ mệnh và tầm nhìn lớn
+Tạo môi trường cởi mở, minh bạch và gắn kết trong công ty, nhóm và cá nhân
+Truyền cảm hứng làm việc cho bạn
+Tạo cơ hội để bạn không ngừng nâng cao năng lực bản thân
+About your working environment:
+Cung cấp nước sạch (Lavie), cà phê, đồ ăn nhẹ, trái cây tươi, giúp bạn có một cơ thể và tinh thần khoẻ mạnh
+Cùng nhau tạo ra những khoảnh khắc và trải nghiệm đáng nhớ qua các chuyến du lịch công ty 1 ~ 2 lần / năm
+Môi trường Agile để bạn có thể thực hành Agile, Scrum hàng ngày
+Nhiều cơ hội giúp bạn khám phá tiềm năng của mình thông qua việc học hỏi các công nghệ tiên tiến và làm việc trực tiếp với khách hàng từ khắp nơi trên thế giới
+About your career path:
+Cơ hội nghề nghiệp không giới hạn: Lập trình viên Fullstack, Trưởng nhóm, Product Owner hoặc Quản lý dự án,...
+Cơ hội trau dồi Tiếng Anh, Kĩ năng quản lý thời gian, Kĩ năng quản lý năng suất…
+Ngoài ra, chúng tôi cũng có nhu cầu tuyển dụng các vị trí khác như Frontend ReactJS và Frontend HTML/CSS/JS bạn cũng có thể ứng tuyển ngay tại job này.
+#nodeJS #reactJS #backend #job #developer #hiring"
+3003406100|Back End Developer|Ho Chi Minh City, Vietnam|Hash Consulting Group (HCG)|Full-time|"About the job
+POSITION: BACK-END ENGINEER (JAVA)
+
+1. JOB RESPONSIBILITES
+• Develop service API for web and mobile application.
+• Write and maintain API documentation.
+• Maintain existing projects that require back-end development works.
+• Collaborating with front-end engineer and other team members to establish objectives and designs more functional, cohesive codes to enhance the user experience.
+• Troubleshooting, identify bugs, root causes, and solutions to these problems.
+• Analyze and improve efficiency, scalability, and stability for systems.
+
+2. JOB REQUIREMENTS
+• Graduated from university in Information Technology or equivalent.
+• At least 2 years of working experiences and strong knowledge in back-end development with the following:
+o Java (8+), Spring Boot, Spring MVC, Spring Security.
+o ORM, Hibernate, Ebean.
+o Databases: MySQL, MSSQL Server
+o REST APIs (XML, JSON)
+o OAuth
+o Unit Testing & Debugging
+o Maven
+• At least 2 years of experience with the following software:
+o Git / Bitbucket / GitHub / GitLab
+o Jira / FreshRelease
+o IntelliJ IDEA / Eclipse
+• Having working experience of the following will be great advantages:
+o CI/CD
+o GraphQL
+o Memcached / Redis
+o RabbitMQ / Kafka
+o Containerize application & microservices architecture
+o Docker and Kubernetes
+o AWS Services such as S3, Lambda, API Gateway, Cognito, SQS, SNS
+o Agile Development
+o Linux
+
+3. RELEVANT SKILLS AND KNOWLEDGE
+• Good team-working and communication skills.
+• Can basically communicate (writing, speaking) in English.
+• Ability to work on multiple projects at the same time and complete tasks in a timely manner.
+• Strong logical thinking abilities
+• Passionate about coding and programming, innovation, and solving challenging problems
+• Attention to details
+• Good organizing, communication, analysis and problem-solving skills.
+• Strive for learning new technologies and continuously self-improving
+
+4. WHY YOU’LL LOVE WORKING FOR HCG?
+• Probation time (2 months) with full salary
+• Performance review twice a year
+• Attractive salary, 13th month salary
+• Free coffee, tea, snack, …
+• 14-day annual leave per year for first 03 years, and plus 1 day for each increasing year from 4th year, and maximum is 20-day.
+• Personal career development plan
+• Training necessary skillset under job requirements.
+• Working time: Mon – Fri, time: 9:00 AM – 6:00 PM (break time: 12:00PM – 1:30 PM)"
+2959129489|Back End Developer|Ho Chi Minh City, Vietnam|Metasource Asia|Full-time|"About the job
+Job Description
+We are looking for 03 experienced Golang and NodeJS Backend Engineer to join our fast-growing company to work on building out our state-of-the-art platform that is built on blockchain technology.
+
+Your responsibilities will include designing and building our products from concept all the way to deployment.
+- Working closely with the project team to design, code, troubleshoot on features/bug fixes.
+- Write robust code with high maintainability and scalability in Golang or NodeJS languages
+- Optimize and develop new features on our microservices-based
+- Write and maintain high-quality technical documentation
+- Testing, and resolution of defects and performance issues
+- Integrating and designing Json APIs
+- Participate in regular Scrums and Sprint planning meetings
+- Contribute and support our team to maintain a great working environment for you and other team members.
+
+Your skills and experiences
+*Must have:
+- Solid Golang or NodeJS, Javascript foundation, at least 1 year of Golang or Node JS/Javascript development experience
+- Experience with Relational Database (MySQL, Postgres) as well as NoSQL (MongoDB)
+- Experience in RESTful APIs and JSON data format
+- Understanding the fundamental design principles behind a scalable application with experience of designing and implementing a microservice-based architecture
+- Understanding of front-end technologies
+- Proficient understanding of code versioning tools like Git and of CI/CD pipelines
+- Working knowledge of Cloud platform: AWS
+- Appetite to learn new frameworks, fast learner, independent researcher, problem-solving and logical analysis and be prepared to implement coding solutions.
+- An appetite for finding solutions to challenging technical problems
+- A collaborative approach to working in a largely virtual organization
+- Educated in computer science
+*Nice to have:
+- Experience with blockchain technology
+- Experience in AWS Lamda programming and implementations
+- Experience using client-side JavaScript frameworks like React is a plus
+
+Why you'll love working here
+- Highly competitive salary
+- Great team
+- 13th-month bonus, performance bonus
+- Performance review 2 times/year
+- 100% salary during probation
+- Social insurance, health insurance, unemployment according to the law
+- Private health insurance
+- Training and working with the latest blockchain technologies
+- Laptop provided
+- International work environment"
+3001898139|Back End Developer|Ho Chi Minh City, Vietnam|Prime Commerce Asia|Full-time|"About the job
+General SOW:
+
+· Build and develop web application to support company product.
+· Analyse product requirements and specifications with the team to design and implement backend services & APIs.
+· Build and maintain tools that will help us to test, deploy, measure, monitor and scale our applications and infrastructure.
+· Work with your team to explore and create new designs geared towards scale and performance. Discuss and debate with other team members to find optimal solutions.
+· Engage in service capacity and demand planning, software performance analysis, tuning and optimization
+Collaborate with product and experience teams to define and prototype features.
+
+Job Requirements
+· At least 2 years of experience using PHP, NodeJs (ideally with PHP version 5/7 knowledge) and at least one of these frameworks (Laravel, CakePHP, CI, Yii 1/2, Symfony)
+· Experience working with RESTful API (or GraphQL is a plus)
+· Knowledge in working with JavaScript
+· Git knowledge and experience
+· Knowledge of design, coding principles (e.g.: clean code, DRY/KISS, SOLID)
+· Familiar with Scrum development approach
+· Good analytical, communication skill. Teamwork spirit.
+
+Benefit:
+· Working in young, dynamic, and friendly environment; highly supported by teammates and Supervisor.
+· Growing business and long-term career path development.
+· Participate in the company’s monthly events and training courses (company training programs and self – studying programs) – fee supported by company.
+· 12 annual paid leaves day.
+· 13th – month salary based on employee’s performance and business result.
+· Allowances: Transportation and Phonecard according to company’s policy.
+· Social, Health and others Insurance base on Labor Law.
+· Company trip and Year-end party.
+· Annual performance review."
+2986063068|Back End Developer|Ho Chi Minh City, Vietnam|Pascal Studio|Full-time|"About the job
+The Company
+Pascal Studio is an elite software development firm that works with fortune 500 companies and emerging start-ups such as Dyson, PCH international, SF Express. We collaborate with leading software partners to provide a well-architected end-to-end technical solution leveraging best-of-breed technology platforms. Some of our notable partners are Amazon Web Services, Google, Alibaba, Snowflake, and Rockset.
+
+Our team collaborates with our customers from different parts of the world (Singapore, China, United Kingdom, Ireland, India, and United States). Our work includes designing new systems and working closely with Product Managers to define product features set in a highly secure, reliable, and scalable solution.
+
+The Job
+Pascal Studio is looking for Back-end Developer to build supply-chain applications. Your responsibility is to:
+Collaborate with team members to work on the project based on the schedule.
+Design, develop and manage RESTful APIs.
+
+Your skills and experience
+Ability to write scalable, testable, efficient, and easily maintainable code
+At least 2 years of developing experience in JavaScript, NodeJS.
+Be familiar with RDBMS(e.g. Postgres) and/or NoSQL DB.
+Proficient understanding of code versioning tools.
+Knowledge of software development using Agile methodology.
+Experience with Amazon Web Services.
+Strong self-study ability, willingness to take risks and try new things.
+Experience in front-end development, UI-UX design is a plus.
+
+Why you love working with us
+Private healthcare insurance.
+Paid leaves: 12 days.
+Working equipment: Macbook Laptop
+Annual health check.
+6 months performance review.
+All benefits (Social insurance, health insurance, unemployment insurance,...) followed Vietnamese labor law.
+13th-month salary (calculated on the percentage of contribution).
+Training opportunity: continuing development of technical, soft skills, and English through both internal and external classes.
+Dynamic, innovative, and friendly.
+Work on exciting, challenging projects with a large variety of cutting-edge technologies.
+Opportunity to work with international clients and colleagues.
+Open working space.
+Flexible working time"
+2955118708|Back End Developer|Ho Chi Minh City, Vietnam|Prime Commerce Asia|Full-time|"About the job
+About Us
+Prime Commerce is a technology company in the e-commerce and communication industry. Its mission is to help develop the E-commerce industry of Vietnam market and other countries in the region such as Malaysia and Singapore, where Prime Commerce plays a pioneering role, supporting sellers, SMEs local and global brands in approaching, operating, and developing E-commerce business. Prime Commerce is currently promoting 2 core aspects: technology products and service in communication strategy.
+We have offices in: Vietnam - Malaysia - Singapore.
+Working location: 84P Nguyễn Đình Chiểu, District 1, TP.HCM
+
+Responsibilities
+General SOW:
+Build and develop web application to support company product.
+Analyse product requirements and specifications with the team to design and implement backend services & APIs.
+Build and maintain tools that will help us to test, deploy, measure, monitor and scale our applications and infrastructure.
+Work with your team to explore and create new designs geared towards scale and performance. Discuss and debate with other team members to find optimal solutions.
+Engage in service capacity and demand planning, software performance analysis, tuning and optimization
+Collaborate with product and experience teams to define and prototype features
+
+Job Requirements
+At least 2 years of experience using PHP, NodeJs (ideally with PHP version 5/7 knowledge) and at least one of these frameworks (Laravel, CakePHP, CI, Yii 1/2, Symfony)
+Experience working with RESTful API (or GraphQL is a plus)
+Knowledge in working with JavaScript
+Git knowledge and experience
+Knowledge of design, coding principles (e.g.: clean code, DRY/KISS, SOLID)
+Familiar with Scrum development approach
+Good analytical, communication skill. Teamwork spirit.
+
+Benefits
+Working in young, dynamic, and friendly environment; highly supported by teammates and Supervisor.
+Growing business and long-term career path development.
+Participate in the company’s monthly events and training courses (company training programs and self–studying programs) – fee supported by the company.
+12 annual paid leaves day.
+13th – month salary based on employee’s performance and business result.
+Allowances: Transportation and Phonecard according to company’s policy.
+Social, Health and others Insurance based on Labor Law.
+Company trip and Year-end party.
+Annual performance review.
+Annual Health Check
+
+----------
+Visit our website primecommerce.asia for more information.
+Please send your CV/Portfolio to thao.vp@primecommerce.edu.vn
+Subject: [Prime Commerce - 0322] Backend Developer - Full name"
+2978722384|Senior Back End Developer|Ho Chi Minh City, Vietnam|Savyu|Full-time|"About the job
+BUILD TOGETHER THE RETAIL TECHNOLOGY OF THE FUTURE
+
+About Savyu
+Savyu is a super Rewards App Platform headquartered in Hong Kong under Savyu Holdings Limited, which was founded in 2018 by top industry-ranked professionals (Alibaba, Smartone, Merrill Lynch, HSBC…).
+Savyu is an ALL-IN-ONE Sales, Marketing and Loyalty solution for offline retailers with a common reward system (Savyu Dollars), utilizing state-of-the-art data technology. Hence, the platform empowers brick-and-mortar retailers to digitize and grow their businesses with a customer-first & loyalty mindset.
+Savyu commits to building a strong established presence in Vietnam, starting from Ho Chi Minh before expanding to the rest of the country and further in Asia. With its good corporate governance and fast learning culture, Savyu shall offer candidates most sought-after experiences and opportunities to grow together in this unique disruptive environment.
+
+Job type: Full time (Mon - Fri from 9:00 - 18:00), Saturday morning (on request)
+Working location: The Perfect Building - 3rd Floor, 150 Le Thi Hong Gam St, District 1 HCMC.
+
+Duties & Responsibilities:
+Lead engineering team to build products following directions of the management;
+Research technical solutions, and work with business and engineering departments to plan and deliver products timely;
+Build and lead an engineering team of 10+ members;
+Support other Savyu departments to implement internal projects, processes and technology/security related training.
+May participate on behalf of Savyu to IT/Retail technology workshop to discuss Savyu technology
+Report directly to COO
+
+Job requirements
+At least 6+ years of experience working as Full stack developer;
+4+ year experience as team leader (estimate, planning, review, report...) with team size from 10 members;
+Proficient knowledge of JavaScript programming language, MUST be familiar with Node.js environment. Experience working with frameworks based on Node.js (such as Express, NestJS) is a plus;
+Design robust client-side solutions with RESTful API for web & mobile applications;
+Experience working with caching system (such as Memcached or Redis…);
+Experience working with cloud service (such as AWS or GCP);
+Experienced design and implement CI/CD Pipelines at least one of popular such as Jenkins, Gitlab CI/CD
+Broad experience and solid understanding of interactive web technologies and mobile development;
+Great problem-solving abilities;
+Open-minded and good at adapting to frequent changes.
+Proactive, thorough, and highly attentive to detail;
+Good teamwork and self-management skills.
+Fluency in English
+
+Benefits
+Salary: Attractive compensation + Bonus
+Full package benefits for employees in accordance with Labor Law
+Full 12 days leave, 5 days sick leave in year
+Attitude bonus, Performance bonus
+Start-up working environment allows you to grow and develop fast
+Free parking"
+2972976562|Back End Developer for Customer Engagement Platform|Ho Chi Minh City, Vietnam|Vidbeyond Video|Full-time|"About the job
+Job Description
+We are looking for a Node.js Developer responsible for managing the interchange of data between the server and the users. Your primary focus will be the development of all server-side logic, definition, and maintenance of the central database, and ensuring high performance and responsiveness to requests from the front-end. You will also be responsible for integrating the front-end elements built by your co-workers into the application. Therefore, a basic understanding of front-end technologies is necessary as well.
+
+Responsibilities
+Integration of user-facing elements developed by front-end developers with server-side logic
+Writing reusable, testable, and efficient code
+Design and implementation of low-latency, high-availability, and performant applications
+Implementation of security and data protection
+Integration of data storage solutions
+Good communication skills, happy to work with the tech team and other teams
+
+Skills And Qualifications
+Strong proficiency with JavaScript, Typescript
+Knowledge of Node.js and frameworks available for it (Express.JS, Nest.JS)
+Understanding the nature of asynchronous programming and its quirks and workarounds
+Good understanding of server-side templating languages
+Basic understanding of front-end technologies, such as HTML5, and CSS3
+Understanding accessibility and security compliance
+User authentication and authorization between multiple systems, servers, and environments
+Integration of multiple data sources and databases into one system
+Understanding fundamental design principles behind a scalable application
+Understanding differences between multiple delivery platforms, such as mobile vs. desktop, and optimizing output to match the specific platform
+Creating database schemas that represent and support business processes
+Implementing automated testing platforms and unit tests
+Proficient understanding of code versioning tools, such as Git
+Preferred Technologies
+Programming language: Javascript, Typescript
+NodeJS Framework: Express, Socket, NestJS
+Database: MongoDB, MySQL
+Others: Serverless, Lambda, FFmpeg (to process video)
+
+Company Introduction
+Vidbeyond is a Video Engagement Platform helping you attract, engage with prospects, create excellent customer experiences, close more deals, and get sustainable growth. Vidbeyond allows you to create, personalize, analyze and monitor your videos and video communication campaigns through its only ONE SMART PLATFORM. Beyond creative video communication, Vidbeyond can help you get advanced data analytics, customer insights, and high levels of video personalization."
