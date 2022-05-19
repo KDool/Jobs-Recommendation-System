@@ -40,7 +40,7 @@ def main():
     df_DS = df_DS[['_id']]
     list_users = df_DS.to_dict('records')
 
-    myclient = pymongo.MongoClient("mongodb://mongoadmin:admin@localhost:27017/")
+    myclient = pymongo.MongoClient("mongodb://mongoadmin:admin@20.212.206.101:27017/")
     mydb = myclient["LinkedIn"]
     mycol = mydb["JobIDs"]
     mycol.insert_many(list_users)
