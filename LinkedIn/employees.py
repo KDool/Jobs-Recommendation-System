@@ -78,7 +78,7 @@ def GetURL():
 
 
 def FullURL():
-    input_page = 100
+    input_page = 10
     URLs_all_page = []
     for page in range(input_page):
         URLs_one_page = GetURL()
@@ -107,20 +107,25 @@ def read_csv(file_name):
 
 
 
-DRIVER_PATH = '../driver/mac/chromedriver'
+# DRIVER_PATH = '../driver/mac/chromedriver'
+DRIVER_PATH = '/usr/bin/chromedriver'
 driver = webdriver.Chrome(executable_path=DRIVER_PATH)
 driver.maximize_window()
 
 def main():
     login()
-    list_keywords = read_csv('search_keywords.csv')
-    for key in list_keywords:
-        search(key)
-        sleep(1.5)
-        url_employees = FullURL()
-        df = pd.DataFrame(url_employees)
-        output_path = './users_result/' + key + '.csv'
-        df.to_csv(output_path, mode='a', header=False, index=False)
-        driver.get('https://www.linkedin.com')
-
+    # list_keywords = read_csv('search_keywords.csv')
+    # for key in list_keywords:
+    #     search(key)
+    #     sleep(1.5)
+    #     url_employees = FullURL()
+    #     df = pd.DataFrame(url_employees)
+    #     output_path = './users_result/' + key + '.csv'
+    #     df.to_csv(output_path, mode='a', header=False, index=False)
+    #     driver.get('https://www.linkedin.com')
+    keyword = 'Tester'
+    search(keyword)
+    url_employees = FullURL()
+    print(url_employees)
+    
 main()
