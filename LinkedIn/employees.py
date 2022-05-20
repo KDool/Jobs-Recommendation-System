@@ -108,7 +108,7 @@ def read_csv(file_name):
 
 
 # DRIVER_PATH = '../driver/mac/chromedriver'
-DRIVER_PATH = '/usr/bin/chromedriver'
+DRIVER_PATH = '../driver/linux/chromedriver_linux64/chromedriver'
 driver = webdriver.Chrome(executable_path=DRIVER_PATH)
 driver.maximize_window()
 
