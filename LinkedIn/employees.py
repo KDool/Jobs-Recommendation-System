@@ -109,6 +109,12 @@ def read_csv(file_name):
 
 # DRIVER_PATH = '../driver/mac/chromedriver'
 DRIVER_PATH = '../driver/linux/chromedriver_linux64/chromedriver'
+from selenium.webdriver.chrome.options import Options
+
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome(executable_path=DRIVER_PATH)
 driver.maximize_window()
 
