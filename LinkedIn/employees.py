@@ -18,7 +18,7 @@ def login():
       sleep(1)
 
       # Task 1.2: Import username and password
-      credential = open('credentials.txt')
+      credential = open('credentials.txt',encoding="utf8")
       line = credential.readlines()
       username = line[0]
       password = line[1]
@@ -37,9 +37,9 @@ def login():
       sleep(2)
 
       # Task 1.2: Click the Login button
-      signin_field = driver.find_element_by_xpath('//*[@id="organic-div"]/form/div[3]/button')
+      """signin_field = driver.find_element_by_xpath('//*[@id="organic-div"]/form/div[3]/button')
       signin_field.click()
-      sleep(1.5)
+      sleep(1.5)"""
 
       print('- Finish Task 1: Login to Linkedin')
 
@@ -78,7 +78,7 @@ def GetURL():
 
 
 def FullURL():
-    input_page = 10
+    input_page = 50
     URLs_all_page = []
     for page in range(input_page):
         URLs_one_page = GetURL()
@@ -109,29 +109,33 @@ def read_csv(file_name):
 
 # DRIVER_PATH = '../driver/mac/chromedriver'
 DRIVER_PATH = '../driver/linux/chromedriver_linux64/chromedriver'
+#DRIVER_PATH = '../driver/windows/chromedriver'
 from selenium.webdriver.chrome.options import Options
-
-chrome_options = Options()
+from webdriver_manager.chrome import ChromeDriverManager
+"""chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-dev-shm-usage')
-driver = webdriver.Chrome(executable_path=DRIVER_PATH,chrome_options=chrome_options)
+chrome_options.add_argument('--disable-dev-shm-usage')"""
+driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+print("00000000000000000")
 driver.maximize_window()
-
+print("111111111111111")
 def main():
     login()
-    # list_keywords = read_csv('search_keywords.csv')
-    # for key in list_keywords:
-    #     search(key)
-    #     sleep(1.5)
-    #     url_employees = FullURL()
-    #     df = pd.DataFrame(url_employees)
-    #     output_path = './users_result/' + key + '.csv'
-    #     df.to_csv(output_path, mode='a', header=False, index=False)
-    #     driver.get('https://www.linkedin.com')
-    keyword = 'Tester'
+    '''list_keywords = read_csv('search_keywords.csv')'''
+    list_keywords = ['Data Engineer']
+    for key in list_keywords:
+        search(key)
+        sleep(1.5)
+        url_employees = FullURL()
+        df = pd.DataFrame(url_employees)
+        output_path = './users_result/2' + key + '.csv'
+        df.to_csv(output_path, mode='a', header=False, index=False)
+        driver.get('https://www.linkedin.com')
+
+    '''keyword = 'Tester'
     search(keyword)
     url_employees = FullURL()
-    print(url_employees)
+    print(url_employees)'''
     
 main()
