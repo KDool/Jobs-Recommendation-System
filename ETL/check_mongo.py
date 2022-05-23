@@ -2,7 +2,7 @@ import pandas as pd
 import pymongo
 
 def connect():
-    url='mongodb://mongoadmin:admin@20.212.206.101:27017/'
+    url='mongodb://mongoadmin:admin@13.67.48.201:27017/'
     myclient = pymongo.MongoClient(url)
     return myclient
 
@@ -23,6 +23,13 @@ def check_id_exist(input='',db='',collection = ''):
         return 0
 
 
-# if __name__=='__main__':
+if __name__=='__main__':
+    url='mongodb://mongoadmin:admin@13.67.48.201:27017/'
+    myclient = pymongo.MongoClient(url)
+    mydb = myclient['LinkedIn']
+    mycol = mydb['UserIDs']
+    mydoc = mycol.find()
+    result = list(mydoc)
+    print(len(result))
 #     a = check_id_exist('huu-dung','LinkedIn','UserIDs')
 #     print(a)
