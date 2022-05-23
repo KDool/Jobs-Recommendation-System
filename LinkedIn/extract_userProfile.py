@@ -1,10 +1,11 @@
+from numpy import insert
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
 from time import sleep
 import csv
 import requests
-
+import pymongo
 
 
 def login():
@@ -15,7 +16,7 @@ def login():
       sleep(1)
 
       # Task 1.2: Import username and password
-      credential = open('credentials.txt')
+      credential = open('credentials.txt',encoding="utf8")
       line = credential.readlines()
       username = line[0]
       password = line[1]
@@ -47,17 +48,12 @@ def getUserProfile(id=''):
     name = ''
     role = ''
     name = driver.find_elements_by_class_name('text-heading-xlarge')[0].text
-    # print("Name: ", name)
-    # driver.get('https://www.linkedin.com/in/' + id +'/details/experience')
-    # experience_list = driver.find_elements_by_class_name('optional-action-target-wrapper')
-    # role = driver.find_element_by_xpath('/html/body/div[5]/div[3]/div/div/div[2]/div/div/main/section[1]/div[2]/div[2]/div[1]/div[2]').text
+
     role = driver.find_element_by_css_selector('#ember37 > div.ph5 > div.mt2.relative > div:nth-child(1) > div.text-body-medium.break-words').text
     # print(role)
-    sleep(0.5)
+    sleep(3)
     skill_list = getSkills(id)
-    # for u in experience_list:
-    #     print(u.text)
-    # Task 4: Scrape the profile information
+    # sleep(2)
     return name,role,skill_list
 
 
@@ -107,6 +103,9 @@ def getEducation(id=''):
 
 def getSkills(id=''):
     driver.get('https://www.linkedin.com/in/' + id +'/details/skills')
+    # sleep(0.2)
+    # driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    
     # pvs-list__paged-list-item artdeco-list__item pvs-list__item--line-separated 
     sleep(0.6)
     skill_list = []
@@ -125,11 +124,59 @@ def getSkills(id=''):
     # print(skill_list)
     return skill_list
 
-print('- Finish importing packages')
+# Connect to Mongo DB
+def connect():
+    url='mongodb://mongoadmin:admin@13.67.48.201:27017/'
+    myclient = pymongo.MongoClient(url)
+    return myclient
 
-DRIVER_PATH = '../driver/mac/chromedriver'
-driver = webdriver.Chrome(executable_path=DRIVER_PATH)
+
+def read_user_mongodb(myclient:pymongo.MongoClient):
+    # Connect to MongoDB
+    # Return list of userID
+    import pandas as pd
+    mydb = myclient['LinkedIn']
+    mycol = mydb['UserIDs']
+    mydoc = mycol.find() 
+    result = list(mydoc)
+    user_id_list = [item['_id'] for item in result]
+    # df = pd.DataFrame(result['_id'])
+    return user_id_list
+
+def insert_a_record(myclient:pymongo.MongoClient,db='LinkedIn',collection='User_skills_profiles',data={}):
+    mydb = myclient[db]
+    mycol = mydb[collection]
+    mycol.insert_one(data)
+
+print('- Finish importing packages')
+# DRIVER_PATH = '../driver/mac/chromedriver'
+from webdriver_manager.chrome import ChromeDriverManager
+driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+# driver = webdriver.Chrome(executable_path=DRIVER_PATH)
 driver.maximize_window()
 
 if __name__ == '__main__':
+    #db connection
+    myclient = connect()
+    user_id_list = read_user_mongodb(myclient)
+    count_users = len(user_id_list)
     login()
+    sleep(2)
+    for i in range(133,233):
+        sleep(3)
+        print("User number: ",i)
+        name=''
+        role = ''
+        skills = []
+        try:
+            skills = getSkills(user_id_list[i])
+        except:
+            print("ERROR at ID: ",user_id_list[i])
+
+        dict_user = {'_id':user_id_list[i],'name':name,'role':role,'skills':skills}
+        print(dict_user)
+        insert_a_record(myclient,'LinkedIn','User_skills_profiles',dict_user)
+    # name,role,skills = getUserProfile(user_id_list[113])
+    # dict_user = {'_id':user_id_list[i],'name':name,'role':role,'skills':skills}
+    # print(dict_user)
+    driver.close()
