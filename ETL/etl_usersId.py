@@ -20,7 +20,7 @@ def create_field_DataFrame(input_list = list):
     list_dfs=[]
     for item in input_list:
         print(item)
-        df_tmp = read_and_clean_single_role('/Users/vankhaido/HUST/Thesis/2/DS/'+item)
+        df_tmp = read_and_clean_single_role('../../DS/'+item)
         list_dfs.append(df_tmp)
 
     df = pd.concat(list_dfs)
@@ -31,7 +31,7 @@ def create_field_DataFrame(input_list = list):
 
 def main():
     # Read all files user ID  result
-    mypath = '/Users/vankhaido/HUST/Thesis/2/DS/'
+    mypath = '../../DS/'
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
     df_DS = create_field_DataFrame(onlyfiles)
@@ -42,16 +42,19 @@ def main():
     myclient = pymongo.MongoClient('mongodb://mongoadmin:admin@13.67.48.201:27017/')
     mydb = myclient["LinkedIn"]
     mycol = mydb["UserIDs"]
+
+    mycol.bulk_write([pymongo.ReplaceOne({'_id':user['_id']},user, upsert=True) for user in list_users])
+    # mycol.update_many(list_users,upsert=True)
     # mydoc = mycol.find()
     # result = list(mydoc)
     # print(len(result))
-    temp_list = []
-    for user in list_users:
-        if check_mongo.check_id_exist(user['_id'],'LinkedIn','UserIDs') == 0:
-            temp_list.append(user)
-            # mycol.insert_one(user)
-
-    mycol.insert_many(temp_list)
+    # temp_list = []
+    # count = 0
+    # for user in list_users:
+    #     print("COUNT: ",count)
+    #     count += 1
+    #     mycol.update_one(user,upsert=True)
+    # mycol.insert_many(list_users,bypass_document_validation=True)
 
 
 main()
