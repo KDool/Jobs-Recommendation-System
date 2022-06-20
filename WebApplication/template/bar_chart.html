@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <!-- <title>{{ title }}</title> -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+
+  <style>
+    body {
+        background-color: #3745c2;
+        margin: 100px 10%;
+        font-family: "Trirong", serif;
+        color: white;
+      }
+
+      form {
+        /* text-align: center; */
+        background-color: #4654e1;
+        width: 30%;
+        height: 44px;
+        border-radius: 5px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+      }
+
+      input {
+        all: unset;
+        font: 16px system-ui;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+      }
+
+      ::placeholder {
+        color: #fff;
+        opacity: 0.7; 
+      }
+
+      svg {
+        color: #fff;
+        fill: currentColor;
+        width: 24px;
+        height: 24px;
+        padding: 10px;
+      }
+
+      button {
+        all: unset;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+      }
+      .chart-section{
+        padding-top: 10%;
+      }
+  </style>
+</head>
+
+<body>
+
+  <div align="center">
+    <form action='/EDA-user-barchart',role="search" id="form", method="POST">
+      <input type="search" id="query" name="roleTitle" placeholder="Search skills for Role in Data Science..." aria-label="Search through site content">
+      <button>
+        <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+      </button>
+    </form>
+  </div>
+
+  <!-- <center>
+    <h1>{{ title }}</h1>
+  </center> -->
+  <div class="chart-section">
+  <center>
+    <canvas id="chart" width="800" height="600" ></canvas>
+    <center>
+    <h2 >{{ title }}</h2>
+    </center>
+    <script>
+      // bar chart data
+      var barData = {
+        labels : [
+          {% for item in labels %}
+           "{{ item }}",
+          {% endfor %}],
+
+        datasets : [{
+          fillColor: "rgb(102, 192, 67)",
+          strokeColor: "#fff",
+          pointColor: "#fff",
+          data : [
+            {% for item in values %}
+               "{{ item }}",
+              {% endfor %}]}]
+            }
+
+     // get bar chart canvas
+     var mychart = document.getElementById("chart").getContext("2d");
+
+       steps = 10
+       max = {{max}}
+
+     // draw bar chart
+     new Chart(mychart).Bar(barData, {
+       scaleOverride: true,
+       scaleSteps: steps,
+       scaleStepWidth: Math.ceil(max / steps),
+       scaleStartValue: 0,
+       scaleShowVerticalLines: true,
+       scaleShowGridLines : true,
+       barShowStroke : true,
+       scaleShowLabels: true,
+       scaleFontColor: "#FFF"
+       }
+     );
+    </script>
+  </center>
+</div>
+</body>
+</html>
