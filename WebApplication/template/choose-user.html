@@ -7,18 +7,23 @@
     <style>
         body {
         background-color: #3745c2;
-        margin: 100px 10%;
+        /* margin: 100px 10%; */
+        margin: auto;
+        background-image: url('https://langgo.edu.vn/public/files/upload/default/images/bai-viet/ielts-vocabulary-chu-de-cong-viec-job1.png');
+        /* background-repeat: repeat; */
       }
 
       form {
         /* text-align: center; */
-        background-color: #4654e1;
+        margin-top: 5%;
+        background-color: #9f7575;
         width: 30%;
         height: 44px;
         border-radius: 5px;
         display:flex;
         flex-direction:row;
         align-items:center;
+        opacity: 95%;
       }
 
       input {
@@ -96,9 +101,119 @@
         background-color: rgb(202, 227, 222);
         word-wrap: break-word;
 }
+.header{
+        /* padding-left: 10%; */
+        /* padding-right: 10%; */
+        background-color: #52732b;
+        opacity: 80%;
+      }
+      .header_navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    margin: auto;
+    
+}
+
+
+.menu_list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 3%;
+    /* margin: auto; */
+    
+}
+
+.menu_item {
+    margin: 0 5px;
+    font-family: serif;
+    line-height: 20px;
+    /* text-align: center; */
+    display: flex;
+    width: 25%;
+    height: auto;
+    background-color: #52732b;
+    /* margin: auto; */
+    border:2px solid #fff;
+    border-radius: 2ch;
+    /* height: 4cm; */    
+}
+
+/* .menu_item :hover{
+    background-color: rgb(190, 63, 131);
+    border:2px solid #fff;
+    border-radius: 1%;
+} */
+.menu_item a {
+    text-decoration: none;
+    color: rgb(239, 233, 233);
+    margin: auto;
+    font-size: 1.8rem;
+    font-weight: 550;
+    transition: linear 0.2s;
+    /* position: relative; */
+    position: relative;
+    font-size: large;
+    /* text-align: center; */
+    padding-left: 3;
+    padding-right: 3;
+    text-align: center;
+    
+}
+
+.menu_item > a:hover {
+    color: #33d286;
+    /* background-color: rgb(190, 63, 131);
+    border:2px solid #fff;
+    border-radius: 1%; */
+}
+  li:hover{
+    color: #fff;
+    background-color: rgb(206, 19, 66);
+    border:2px solid #fff;
+    border-radius: 5%;
+}
+.menu_item > a:hover .menu_men_item {
+
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    z-index: 999;
+    
+}
     </style>
   </head>
   <body>
+    <header class="header">
+      <div class="grid">
+          <div class="header_navbar">
+              <div class="menu_wrap">
+                  <div class="main_menu">
+                      <ul class="menu_list">
+                          <!-- <li class="menu_item">
+                              <a href="/home.html">HOME</a>
+                          </li> -->
+                          <li class="menu_item input_user">
+                              <a href="/input-user-recommend">Input User Profile</a>
+                          </li>
+                          <li class="menu_item choose_user">
+                              <a href="/search">Choose Available User</a>
+                          </li>
+                          <li class="menu_item compare_user">
+                              <a href="/compare-user">Compare User</a>
+                          </li>
+                          <li class="menu_item EDA">
+                            <a href="/EDA-user-barchart">EDA By Role</a>
+                        </li>
+                          
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
     <div align="center">
       <form action='/search',role="search" id="form", method="POST">
         <input type="search" id="query" name="userID" placeholder="Search jobs for User ID..." aria-label="Search through site content">
@@ -109,8 +224,8 @@
     </div>
     
 
-    <div align="center">
-        <table>
+    <div align="center" style="padding-left: 10%;padding-right: 10%;">
+        <table style="color: darkgoldenrod;"
             <h1>
             <!--Displaying the converted table-->
                  {% for table in tables %}

@@ -197,6 +197,21 @@ def EDA_user_role(df_user:pd.DataFrame,input=''):
     return keys, values
 
 
+def user_job_score(test_user:dict,job_title,job_vector:list):
+    jaccard_score,skills = jaccard_similarity(job_vector,test_user['user_vector'])
+    domain_score = domain_comparison(job_title,test_user['experience'])
+    overall_score = general_similarity(jaccard_score,domain_score)
+    return overall_score,skills
+
+def compare_users_1JD(user1_vector:dict,user2_vector:dict, job_title,job_vector:list):
+    user1_score,user1_match_skills = user_job_score(user1_vector,job_title,job_vector)
+    user2_score,user2_match_skills = user_job_score(user2_vector,job_title,job_vector)
+    print("USER 1 Score: ",user1_score,user1_match_skills)
+    print("USER 2 Score: ",user2_score,user2_match_skills)
+    # list_user = []
+    return user1_score,user1_match_skills,user2_score,user2_match_skills
+
+
 
 def main():
     df_job = load_job_data()

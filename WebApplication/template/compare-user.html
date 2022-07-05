@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title> Input User Profiles </title>     
+        <title> Compare Users </title>     
     <style>
         body {
         background-color: #3745c2;
         /* margin: 100px 10%; */
-        font-family: "Trirong", serif;
-        color: white;
         margin: auto;
         background-image: url('https://langgo.edu.vn/public/files/upload/default/images/bai-viet/ielts-vocabulary-chu-de-cong-viec-job1.png');
+        background-repeat: repeat;
       }
 
       form {
         /* text-align: center; */
-        margin-top: 5%;
-        background-color: #9f7575;;
-        width: 40%;
+        /* background-color: #999aa7; */
+        width: 30%;
         height: 10%;
         border-radius: 5px;
         display:flex;
@@ -25,6 +23,7 @@
         /* display: block; */
         display: flex;
         justify-content: center;
+        background-color: #9f7575;
         opacity: 95%;
       }
 
@@ -38,6 +37,7 @@
         display: block;
         text-align: left;
         padding-top: 2%;
+
       }
 
       ::placeholder {
@@ -107,12 +107,10 @@
         background-color: rgb(27, 129, 107);
         text-align: center;
       }
-
       th, td {
         padding: 20px;
-        background-color: rgb(201, 222, 217);
+        background-color: rgb(202, 227, 222);
         word-wrap: break-word;
-        color: black;
       }
 
       .myform{
@@ -133,8 +131,10 @@
       }
       .search_button{
         /* float: right; */
-        padding-top: 5px;
-        padding-left: 50px;
+        /* padding-top: 5px;
+        padding-left: 50px; */
+        margin: auto;
+        text-align: center;
       }
       .header{
         /* padding-left: 10%; */
@@ -219,8 +219,7 @@
     z-index: 999;
     
 }
- 
- </style>     
+    </style>     
     </head>
     <body>
       <header class="header">
@@ -242,7 +241,7 @@
                                 <a href="/compare-user">Compare User</a>
                             </li>
                             <li class="menu_item EDA">
-                              <a href="/EDA-user-barchart">Analyze Job By Role</a>
+                              <a href="/EDA-user-barchart">EDA By Role</a>
                           </li>
                             
                         </ul>
@@ -252,13 +251,16 @@
         </div>
     </header>
         <div class='myform' flex="left">
-            <form action='/input-user-recommend',role="search" id="form", method="POST">
+            <form action='/compare-user',role="search" id="form", method="POST">
               <div class='search_pad'>
                 <div class='search_input'>
-                    <input type="search" id="query" name="userExp" placeholder="User Experience..." aria-label="Search through site content">
+                    <input type="search" id="query" name="user1_id" placeholder="Input User 1 ID..." aria-label="Search through site content">
                 </div>
                 <div class='search_input'>
-                  <input type="search" id="query" name="userSkills" placeholder="User Skills..." aria-label="Search through site content">
+                  <input type="search" id="query" name="user2_id" placeholder="Input User 2 ID..." aria-label="Search through site content">
+                </div>
+                <div class='search_input'>
+                  <input type="search" id="query" name="job_id" placeholder="Input Job Description ID..." aria-label="Search through site content">
                 </div>
               </div>
               <div class='search_button'>
@@ -269,8 +271,8 @@
             </form>
           </div>
 
-        <div align="center" style="padding-left: 10%;padding-right: 10%;"> 
-            <table >
+          <div align="center" style="padding-left: 10%;padding-right: 10%;">
+            <table>
                 <h1>
                 <!--Displaying the converted table-->
                      {% for table in tables %}
