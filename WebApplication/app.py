@@ -43,6 +43,7 @@ def users():
             links.append(job_link)
         df_result['Link'] = links
         df_result = df_result[['job_id','jobTitle','Link','skills_match','similarity']]
+        df_result = recommend.filter_threshold(df_result)
         df_result.rename(columns = {'similarity':'Score'}, inplace = True)
         print("DF RESULT: \n",df_result)
         # df_result = df_job_data[['job_id','jobTitle']]
@@ -86,6 +87,7 @@ def search_userId():
             links.append(job_link)
         df_result['Link'] = links
         df_result = df_result[['job_id','jobTitle','Link','skills_match','similarity']]
+        df_result = recommend.filter_threshold(df_result)
         df_result.rename(columns = {'similarity':'Score'}, inplace = True)
 
         return render_template('choose-user.html',tables=[df_result.to_html(render_links=True, escape=False)], titles=[''])
@@ -96,12 +98,7 @@ def search_userId():
 def compare_user():
     if request.method == 'POST':
         user1_id = request.form['user1_id']
-        # user1_exp = df_user_data[df_user_data['_id'] == user1_id]['experience']
-        # user1_skills = df_user_data[df_user_data['_id'] == user1_id]['user_vector']
-
         user2_id = request.form['user2_id']
-        # user2_exp = df_user_data[df_user_data['_id'] == user2_id]['experience']
-        # user2_skills = df_user_data[df_user_data['_id'] == user2_id]['user_vector']
         user1 = df_user_data[df_user_data['_id'] == user1_id].iloc[0].to_dict()
         user2 = df_user_data[df_user_data['_id'] == user2_id].iloc[0].to_dict()
         # user1 = {'experience':user1_exp,'user_vector':user1_skills}
@@ -115,7 +112,6 @@ def compare_user():
         print(test_job)
         s1,m1,s2,m2 = recommend.compare_users_1JD(user1_vector=user1,user2_vector=user2,job_title=test_job['jobTitle'],job_vector=test_job['skills'])
 
-        # s1,m1, s2,m2 = recommend.compare_users_1JD(user1,user2, job_title,job_vector)
 
         dictionary_result = [{'user_id':user1['_id'],'match skills':m1,'experience':user1['experience'],'score':s1,'Job Link':job_link,'Job Title':test_job['jobTitle']},
         {'user_id':user2['_id'],'match skills':m2,'experience':user2['experience'],'score':s2,'Job Link':job_link,'Job Title':test_job['jobTitle']},

@@ -13,8 +13,14 @@
         font-family: "Trirong", serif;
         color: white;
         margin: auto;
-        background-image: url('https://blog.sngine.com/wp-content/uploads/2020/11/shutterstock_268688447.jpg');
+        /* background-image: url('https://langgo.edu.vn/public/files/upload/default/images/bai-viet/ielts-vocabulary-chu-de-cong-viec-job1.png'); */
+       background-image: url('https://wallpaperaccess.com/full/456236.jpg');
+        /* background-image: url('b4.jpeg'); */
         /* background-repeat: no-repeat; */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
       }
 
       form {
@@ -144,6 +150,19 @@
     z-index: 999;
     
 }
+
+.chart-section{
+  margin: auto;
+  margin-top: 2%;
+  padding-top: 2%;
+  width: 45%;
+  background-color: rgb(19, 84, 137);
+  opacity: 90%;
+  width: 70%;
+  border-radius: 50px;
+}
+
+
   </style>
 
 </head>
@@ -188,12 +207,13 @@
   <!-- <center>
     <h1>{{ title }}</h1>
   </center> -->
-  <div class="chart-section">
+  <div class="chart-section" style="font-weight: 400;">
   <center>
-    <canvas id="chart" width="800" height="600"></canvas>
     <center>
-    <h2 >{{ title }}</h2>
-    </center>
+      <h2 style="color: #fff;">{{ title }}</h2>
+      </center>
+    <canvas class = "mych" id="chart" width="900" height="600"></canvas>
+    
     <script>
       // bar chart data
       var barData = {
@@ -228,7 +248,7 @@
        scaleShowGridLines : true,
        barShowStroke : true,
        scaleShowLabels: true,
-       scaleFontColor: "#FFF"
+       scaleFontColor: "#fff"
        }
      );
     </script>

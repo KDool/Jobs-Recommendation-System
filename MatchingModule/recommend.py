@@ -213,6 +213,14 @@ def compare_users_1JD(user1_vector:dict,user2_vector:dict, job_title,job_vector:
 
 
 
+MAX_SCORE = 11.98
+
+def filter_threshold(df: pd.DataFrame, threshold=0.2):
+    threshold_score = MAX_SCORE * threshold
+    dfx = df[df['similarity']>threshold_score]
+    # print(dfx)
+    return dfx
+
 def main():
     df_job = load_job_data()
     df_user = load_user_data()
