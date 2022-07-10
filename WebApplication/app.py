@@ -16,7 +16,7 @@ app = Flask(__name__,template_folder='template')
 @app.route('/')
 def index():
     # return redirect('/user')
-    return render_template('index.html')
+    return render_template('home.html')
 
 
 @app.route('/input-user-recommend',methods=['GET', 'POST'])
