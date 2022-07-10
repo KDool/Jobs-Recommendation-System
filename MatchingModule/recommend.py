@@ -249,28 +249,6 @@ def filter_threshold(df: pd.DataFrame, threshold=0.2):
 # Analyze Job Locations
 
 import collections
-# def filter_location(text=''):
-#     l1 = text.split(',',1)[0]
-#     # print("L1: ",l1)
-#     return l1
-
-# # filter_location('Hanoi Capital Region')
-
-# def EDA_on_location(df:pd.DataFrame):
-#     temp_location = []
-#     for i in range(0,len(df)):
-#         # print("I: ",i)
-#         text = ''
-#         try:
-#             text = df.iloc[i]['location']
-#         except:
-#             text = ''
-#             print("Empty location: ",i)
-#         temp_location.append(filter_location(text))
-#     fre_dictionary = dict(collections.Counter(temp_location))
-#     keys = list(fre_dictionary.keys())
-#     values = list(fre_dictionary.values())
-#     return  keys,values
 
 def filter_location(text=''):
     l1 = list(set(text.split(',')))
@@ -414,9 +392,26 @@ def EDA_workingexp(df_user:pd.DataFrame):
         dictionary_histogram[bin_name] += dict_result[item]
     print(dictionary_histogram) 
     return dictionary_histogram
+##########################################
+def EDA_education(df_user_skills):
+    degree_level = ['degree','bachelors','masters','masters','phd','engineers','associate','researcher','NaN']
+    education_dictionary = {}
+    for i in degree_level:
+        education_dictionary[i] = 0
 
-
-
+    for i in range (len(df_user_skills)):
+        skills_list = df_user_skills.iloc[i]['user_vector']
+        check = 0
+        if len(skills_list) < 1 :
+            continue
+        else:
+            for item in degree_level:
+                if item in skills_list:
+                    check = 1
+                    education_dictionary[item] +=1
+        if check == 0:
+            education_dictionary['NaN'] += 1
+    return education_dictionary
 
 def main():
     df_job = load_job_data()
