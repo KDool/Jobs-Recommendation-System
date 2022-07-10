@@ -171,5 +171,5 @@ if __name__ == '__main__':
     df_user = recommend.load_full_Users()
     # print("DF JOB: ",df_job_data)
     # print("DF USER: ",df_user_data)
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080,debug=True)
 
