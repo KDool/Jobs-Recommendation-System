@@ -6,6 +6,29 @@ import ast
 from difflib import SequenceMatcher
 
 
+
+def load_full_JDs():
+    myclient = pymongo.MongoClient("mongodb://mongoadmin:admin@13.67.48.201:27017/")
+    mydb = myclient["LinkedIn"]
+    mycol = mydb["JobsDescription"]
+    cursor = mycol.find()
+    items = list(cursor)
+    df_jobs = pd.DataFrame(items)
+    myclient.close()
+    return df_jobs
+
+def load_full_Users():
+    myclient = pymongo.MongoClient("mongodb://mongoadmin:admin@13.67.48.201:27017/")
+    mydb = myclient["LinkedIn"]
+    # Get job skills
+    mycol = mydb["User_experience"]
+    cursor = mycol.find()
+    items = list(cursor)
+    df_user = pd.DataFrame(items)
+    myclient.close()
+    return df_user
+
+
 def load_job_data():
     myclient = pymongo.MongoClient("mongodb://mongoadmin:admin@13.67.48.201:27017/")
     mydb = myclient["LinkedIn"]
@@ -33,7 +56,7 @@ def load_job_data():
         x = ast.literal_eval(df_temp.iloc[i]['skills'])
         column_skills.append(x)
     df_job['skills'] = column_skills
-
+    myclient.close()
     return df_job
 
 
@@ -211,7 +234,7 @@ def compare_users_1JD(user1_vector:dict,user2_vector:dict, job_title,job_vector:
     # list_user = []
     return user1_score,user1_match_skills,user2_score,user2_match_skills
 
-
+####################################
 
 MAX_SCORE = 11.98
 
@@ -221,10 +244,184 @@ def filter_threshold(df: pd.DataFrame, threshold=0.2):
     # print(dfx)
     return dfx
 
+
+#####################################
+# Analyze Job Locations
+
+import collections
+# def filter_location(text=''):
+#     l1 = text.split(',',1)[0]
+#     # print("L1: ",l1)
+#     return l1
+
+# # filter_location('Hanoi Capital Region')
+
+# def EDA_on_location(df:pd.DataFrame):
+#     temp_location = []
+#     for i in range(0,len(df)):
+#         # print("I: ",i)
+#         text = ''
+#         try:
+#             text = df.iloc[i]['location']
+#         except:
+#             text = ''
+#             print("Empty location: ",i)
+#         temp_location.append(filter_location(text))
+#     fre_dictionary = dict(collections.Counter(temp_location))
+#     keys = list(fre_dictionary.keys())
+#     values = list(fre_dictionary.values())
+#     return  keys,values
+
+def filter_location(text=''):
+    l1 = list(set(text.split(',')))
+    r = []
+    for i in range(0,len(l1)):
+        l1[i] = l1[i].strip().lower()
+    l1 = list(set(l1))
+    for i in range(0,len(l1)):
+        if '/' not in l1[i]:
+            r.append(l1[i])
+    # print("L1: ",r)
+    return r
+
+# filter_location('Hanoi Capital Region')
+
+def EDA_on_location(df:pd.DataFrame):
+    df_x = df.copy()
+    temp_location = []
+    for i in range(0,len(df_x)):
+        text = df.iloc[i]['location']
+        temp_location.append(filter_location(text))
+    df_x['filter_location'] = temp_location
+    list_of_types = []
+
+    for i in range (0, len(df_x)):
+        list_of_types += df_x.iloc[i]['filter_location']
+    dict_result = dict(collections.Counter(list_of_types))
+    # print(dict_result)
+    keys = list(dict_result.keys())
+    values = list(dict_result.values())
+    return keys,values
+    
+#####################################################
+# Analyze Job Working Type
+def filter_workingType(text=''):
+    l1 = list(set(text.split('·')))
+    r = []
+    for i in range(0,len(l1)):
+        l1[i] = l1[i].strip().lower()
+    l1 = list(set(l1))
+    for i in range(0,len(l1)):
+        if '/' not in l1[i]:
+            r.append(l1[i])
+    # print("L1: ",r)
+    return r
+
+def process_DfWorkingType(df:pd.DataFrame):
+    column_types = []
+    df_x = df.copy()
+    for i in range(0, len(df)):
+        column_types.append(filter_workingType(df_x.iloc[i]['type']))
+    df_x['working'] = column_types
+    return df_x
+
+def EDA_on_working(df:pd.DataFrame):
+    df_job = df.copy()
+    df_x = process_DfWorkingType(df_job)
+    list_of_types = []
+    for i in range (0, len(df_x)):
+        list_of_types += df_x.iloc[i]['working']
+    dict_result = dict(collections.Counter(list_of_types))
+    # print(dict_result)
+    keys = list(dict_result.keys())
+    values = list(dict_result.values())
+    return keys,values
+########################################################
+# EDA by Year in Experience
+
+
+
+
+import collections
+import re
+def compute_months(text=''):
+    # calculate months experience from string
+    total_months = 0
+    check_year = 'yr' in text
+    check_month = 'mo' in text
+    test_list = text.replace('yr','').replace('mo','').replace('s','').split(' ')
+    res = []
+    for val in test_list:
+        if val != '' and val.isnumeric() :
+            # print(val)
+            res.append(int(val))
+        
+    # print(res)
+    # print("Check Month: ",check_month)
+    # print("Check Year: ",check_year)
+        # print(text,len(text))
+    if check_year == True and check_month == True:
+        total_months = res[0]*12 + res[1]
+    elif check_year == True and check_month == False:
+        total_months = res[0]*12
+    elif check_year == False and check_month == True:
+        total_months = res[0]
+    else:
+        total_months = 0
+    return total_months
+
+def EDA_workingexp(df_user:pd.DataFrame):
+    column_months = []
+    for i in range (0,len(df_user)):
+        if len(df_user.iloc[i]['experience']) >0 :
+            exp_list = df_user.iloc[i]['experience']
+            sum = 0
+            for j in range(len(exp_list)):
+                s = exp_list[j]
+                l = s.split('·')[-1].split(',')[0].strip()
+                # regex_check = re.search('(([0-9])* yr(s)* *)*([0-9]+ mos*)*', l)
+                if l[0] >= '0' and l[0] <= '9' and (l[1].isalpha()==False):
+                    months_exp = compute_months(l)
+                    sum = sum + months_exp
+                    sum += 0
+            if sum > (12*60):
+                column_months.append('NaN')
+            else:
+                column_months.append(sum/12)
+            # print(l)
+        else:
+            column_months.append('NaN')
+
+    dict_result = dict(collections.Counter(column_months))
+    records_NaN = {'NaN':dict_result['NaN']}
+    # print(records_NaN)
+    dict_result.pop('NaN')
+
+
+    dictionary_histogram = {}
+    for i in range (0,12):
+        bin_name = str(5*i) + '-' + str(5*i+5)
+        print(bin_name)
+        dictionary_histogram[bin_name] = 0
+
+    dictionary_histogram['NaN'] = records_NaN['NaN']
+
+    key_values = list(dict_result.keys())
+    for item in key_values:
+        bin = int(item/5)
+        bin_name = str(5*bin) + '-' + str(5*bin+5)
+        # print(a[item])
+        dictionary_histogram[bin_name] += dict_result[item]
+    print(dictionary_histogram) 
+    return dictionary_histogram
+
+
+
+
 def main():
     df_job = load_job_data()
     df_user = load_user_data()
-    df_result = recommend(df_user.iloc[56]['experience'],df_user.iloc[56]['user_vector'],df_job)
-    print(df_result)
+    # df_result = recommend(df_user.iloc[56]['experience'],df_user.iloc[56]['user_vector'],df_job)
+    # print(df_result)
 
 # main()

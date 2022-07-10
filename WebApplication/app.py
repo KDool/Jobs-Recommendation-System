@@ -1,5 +1,6 @@
 from cgi import test
 from logging.handlers import RotatingFileHandler
+from unittest import result
 from flask import Flask, render_template, request, redirect
 from graphviz import render
 from matplotlib.pyplot import bar_label
@@ -16,6 +17,7 @@ app = Flask(__name__,template_folder='template')
 def index():
     # return redirect('/user')
     return render_template('index.html')
+
 
 @app.route('/input-user-recommend',methods=['GET', 'POST'])
 def users():
@@ -73,6 +75,8 @@ def EDA_user_barchart():
     else:
         return render_template('bar_chart.html')
 
+
+
 @app.route('/search',methods=['GET', 'POST'])
 def search_userId():
     if request.method == 'POST':
@@ -93,6 +97,7 @@ def search_userId():
         return render_template('choose-user.html',tables=[df_result.to_html(render_links=True, escape=False)], titles=[''])
     else:
         return render_template('choose-user.html')
+
 
 @app.route('/compare-user',methods=['GET', 'POST'])
 def compare_user():
@@ -122,9 +127,35 @@ def compare_user():
     else:
         return render_template('compare-user.html')
 
+@app.route('/EDA-location')
+def eda_location():
+    bar_keys,bar_values = recommend.EDA_on_location(df_jobs)
+    print(bar_keys,bar_values)
+    return render_template('eda_location.html',title='EDA In Locations', max=1500,labels=bar_keys, values=bar_values)
+
+@app.route('/EDA-workingtypes')
+def eda_workingtypes():
+    bar_keys,bar_values = recommend.EDA_on_working(df_jobs)
+    return render_template('eda_workingtypes.html',title='EDA In Working Types', max=1500,labels=bar_keys, values=bar_values)
+
+
+@app.route('/EDA-year-exp')
+def eda_year_exp():
+    result_dictionary = recommend.EDA_workingexp(df_user)
+    print(result_dictionary)
+    bar_keys = list(result_dictionary.keys())
+    bar_values = list(result_dictionary.values())
+    return render_template('eda_experience.html',title='EDA In Year Experience', max=2000,labels=bar_keys, values=bar_values)
+
+
+
+
+
 if __name__ == '__main__':
     df_job_data = recommend.load_job_data()
     df_user_data = recommend.load_user_data()
+    df_jobs = recommend.load_full_JDs()
+    df_user = recommend.load_full_Users()
     # print("DF JOB: ",df_job_data)
     # print("DF USER: ",df_user_data)
     app.run(debug=True)

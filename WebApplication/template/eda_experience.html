@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EDA Working Experience</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+
+  <style>
+    
+    body {
+        background-color: #3745c2;
+        /* margin: 100px 10%; */
+        font-family: "Trirong", serif;
+        color: white;
+        margin: auto;
+        /* background-image: url('https://langgo.edu.vn/public/files/upload/default/images/bai-viet/ielts-vocabulary-chu-de-cong-viec-job1.png'); */
+       background-image: url('https://wallpaperaccess.com/full/456236.jpg');
+        /* background-image: url('b4.jpeg'); */
+        /* background-repeat: no-repeat; */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      form {
+        /* text-align: center; */
+        margin-top: 5%;
+        background-color: #9f7575;;
+        width: 30%;
+        height: 44px;
+        border-radius: 5px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        opacity: 95%;
+      }
+
+      input {
+        all: unset;
+        font: 16px system-ui;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+      }
+
+      ::placeholder {
+        color: #fff;
+        opacity: 0.7; 
+      }
+
+      svg {
+        color: #fff;
+        fill: currentColor;
+        width: 24px;
+        height: 24px;
+        padding: 10px;
+      }
+
+      button {
+        all: unset;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+      }
+      .chart-section{
+        padding-top: 10%;
+      }
+      .header{
+        /* padding-left: 10%; */
+        /* padding-right: 10%; */
+        background-color: #52732b;
+        opacity: 80%;
+      
+      }
+      .header_navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    margin: auto;
+    
+}
+
+
+.menu_list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 3%;
+    /* margin: auto; */
+    
+}
+
+.menu_item {
+    margin: 0 5px;
+    font-family: serif;
+    line-height: 20px;
+    /* text-align: center; */
+    display: flex;
+    width: 25%;
+    height: auto;
+    background-color: #52732b;
+    /* margin: auto; */
+    border:2px solid #fff;
+    border-radius: 2ch;
+    /* height: 4cm; */    
+}
+
+/* .menu_item :hover{
+    background-color: rgb(190, 63, 131);
+    border:2px solid #fff;
+    border-radius: 1%;
+} */
+.menu_item a {
+    text-decoration: none;
+    color: rgb(239, 233, 233);
+    margin: auto;
+    font-size: 1.8rem;
+    font-weight: 550;
+    transition: linear 0.2s;
+    /* position: relative; */
+    position: relative;
+    font-size: large;
+    /* text-align: center; */
+    padding-left: 3;
+    padding-right: 3;
+    text-align: center;
+    
+}
+
+.menu_item > a:hover {
+    color: #33d286;
+    /* background-color: rgb(190, 63, 131);
+    border:2px solid #fff;
+    border-radius: 1%; */
+}
+  li:hover{
+    color: #fff;
+    background-color: rgb(206, 19, 66);
+    border:2px solid #fff;
+    border-radius: 5%;
+}
+.menu_item > a:hover .menu_men_item {
+
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    z-index: 999;
+    
+}
+
+.chart-section{
+  margin: auto;
+  margin-top: 2%;
+  padding-top: 2%;
+  width: 45%;
+  background-color: rgb(19, 84, 137);
+  opacity: 90%;
+  width: 70%;
+  border-radius: 50px;
+}
+
+
+  </style>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="grid">
+        <div class="header_navbar">
+            <div class="menu_wrap">
+                <div class="main_menu">
+                    <ul class="menu_list">
+                        <!-- <li class="menu_item">
+                            <a href="/home.html">HOME</a>
+                        </li> -->
+                        <li class="menu_item input_user">
+                          <a href="/input-user-recommend">Input User Profile</a>
+                      </li>
+                      <li class="menu_item choose_user">
+                          <a href="/search">Choose Available User</a>
+                      </li>
+                      <li class="menu_item compare_user">
+                          <a href="/compare-user">Compare User</a>
+                      </li>
+                      <li class="menu_item EDA_role">
+                        <a href="/EDA-user-barchart">EDA By Role</a>
+                        </li>
+                        <li class="menu_item EDA_location">
+                        <a href="/EDA-location">EDA Locations</a>
+                        </li>
+                        <li class="menu_item EDA_workingtypes">
+                        <a href="/EDA-workingtypes">EDA Working Types</a>
+                        </li>
+                        <li class="menu_item EDA_working-exp">
+                            <a href="/EDA-year-exp">EDA Working Experience</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+  <!-- <div align="center">
+    <form action='/EDA-user-barchart',role="search" id="form", method="POST">
+      <input type="search" id="query" name="roleTitle" placeholder="Search skills for Role in Data Science..." aria-label="Search through site content">
+      <button>
+        <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+      </button>
+    </form>
+  </div> -->
+
+  <!-- <center>
+    <h1>{{ title }}</h1>
+  </center> -->
+  <div class="chart-section" style="font-weight: 400;">
+  <center>
+    <center>
+      <h2 style="color: #fff;">{{ title }}</h2>
+      </center>
+    <canvas class = "mych" id="chart" width="900" height="600"></canvas>
+    
+    <script>
+      // bar chart data
+      var barData = {
+        labels : [
+          {% for item in labels %}
+           "{{ item }}",
+          {% endfor %}],
+        
+        datasets : [{
+          fillColor: "rgb(120, 13, 68)",
+          strokeColor: "#fff",
+          pointColor: "#fff",
+          data : [
+            {% for item in values %}
+               "{{ item }}",
+              {% endfor %}]}]
+            }
+        var options = {
+        scales: {
+            yAxes: [{
+            scaleLabel: {
+                display: true,
+                labelString: 'probability'
+                }
+                }]
+            }     
+        }
+    // var hisdata = {
+
+    // }
+     // get bar chart canvas
+     var mychart = document.getElementById("chart").getContext("2d");
+
+       steps = 10
+       max = {{max}}
+
+     // draw bar chart
+     new Chart(mychart).Bar(barData, {
+       scaleOverride: true,
+       scaleSteps: steps,
+       scaleStepWidth: Math.ceil(max / steps),
+       scaleStartValue: 0,
+       scaleShowVerticalLines: true,
+       scaleShowGridLines : true,
+       barShowStroke : true,
+       scaleShowLabels: true,
+       scaleFontColor: "#fff",
+       
+       }
+       
+     )
+    </script>
+  </center>
+</div>
+</body>
+</html>
