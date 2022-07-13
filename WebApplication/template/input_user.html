@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Input User Profiles </title>     
+    <style>
+        body {
+          background-color: #3745c2;
+        /* margin: 100px 10%; */
+        font-family: "Trirong", serif;
+        color: white;
+        margin: auto;
+        /* background-image: url('https://langgo.edu.vn/public/files/upload/default/images/bai-viet/ielts-vocabulary-chu-de-cong-viec-job1.png'); */
+        background-image: url('https://wallpaperaccess.com/full/456236.jpg');
+        /* background-image: url('b4.jpeg'); */
+        /* background-repeat: no-repeat; */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      form {
+        /* text-align: center; */
+        margin-top: 5%;
+        background-color: #9f7575;;
+        width: 40%;
+        height: 10%;
+        border-radius: 5px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        /* display: block; */
+        display: flex;
+        justify-content: center;
+        opacity: 95%;
+      }
+
+      input {
+        all: unset;
+        font: 20px system-ui;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        padding: 20px 20px;
+        display: block;
+        text-align: left;
+        padding-top: 2%;
+      }
+
+      ::placeholder {
+        color: #fff;
+        opacity: 0.7; 
+        font-size: medium;
+      }
+
+      svg {
+        color: #fff;
+        fill: currentColor;
+        width: 24px;
+        height: 24px;
+        padding: 10px;
+      }
+
+      button {
+        all: unset;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+      }
+      table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid rgba(121, 157, 96, 0.275);
+    background-color: #fff;
+    text-align: center;
+}
+
+      thead th:nth-child(1) {
+        width: 5%;
+        background-color: rgb(27, 129, 107);
+        text-align: center;
+      }
+
+      thead th:nth-child(2) {
+        width: 10%;
+        background-color: rgb(27, 129, 107);
+        text-align: center;
+      }
+
+      thead th:nth-child(3) {
+        width: 10%;
+        background-color: rgb(27, 129, 107);
+        text-align: center;
+      }
+
+      thead th:nth-child(4) {
+        width: 15%;
+        background-color: rgb(27, 129, 107);
+        text-align: center;
+      }
+      thead th:nth-child(5) {
+        width: 10%;
+        background-color: rgb(27, 129, 107);
+        text-align: center;
+      }
+      thead th:nth-child(6) {
+        width: 10%;
+        background-color: rgb(27, 129, 107);
+        text-align: center;
+      }
+      thead th:nth-child(7) {
+        width: 10%;
+        background-color: rgb(27, 129, 107);
+        text-align: center;
+      }
+
+      th, td {
+        padding: 20px;
+        background-color: rgb(201, 222, 217);
+        word-wrap: break-word;
+        color: black;
+      }
+
+      .myform{
+        /* float:  */
+        padding-top: 1%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 2%;
+        /* flex-flow: row; */
+        display: flex;
+        justify-content: center;
+      }
+
+      .search_pad{
+        float: left;
+        width: 70%;
+        
+      }
+      .search_button{
+        /* float: right; */
+        padding-top: 5px;
+        padding-left: 50px;
+      }
+      .header{
+        /* padding-left: 10%; */
+        /* padding-right: 10%; */
+        background-color: #52732b;
+        opacity: 80%;
+      
+      }
+      .header_navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 1%;
+    
+}
+
+
+.menu_list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 3%;
+    /* margin: auto; */
+    
+}
+
+.menu_item {
+    margin: 0 5px;
+    font-family: serif;
+    line-height: 20px;
+    /* text-align: center; */
+    display: flex;
+    width: 25%;
+    height: auto;
+    background-color: #52732b;
+    /* margin: auto; */
+    border:2px solid #fff;
+    border-radius: 2ch;
+    /* height: 4cm; */    
+}
+
+/* .menu_item :hover{
+    background-color: rgb(190, 63, 131);
+    border:2px solid #fff;
+    border-radius: 1%;
+} */
+.menu_item a {
+    text-decoration: none;
+    color: rgb(239, 233, 233);
+    margin: auto;
+    font-size: 1.8rem;
+    font-weight: 550;
+    transition: linear 0.2s;
+    /* position: relative; */
+    position: relative;
+    font-size: large;
+    /* text-align: center; */
+    padding-left: 3;
+    padding-right: 3;
+    text-align: center;
+    
+}
+
+.menu_item > a:hover {
+    color: #33d286;
+    /* background-color: rgb(190, 63, 131);
+    border:2px solid #fff;
+    border-radius: 1%; */
+}
+  li:hover{
+    color: #fff;
+    background-color: rgb(206, 19, 66);
+    border:2px solid #fff;
+    border-radius: 5%;
+}
+.menu_item > a:hover .menu_men_item {
+
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    z-index: 999;
+    
+}
+ 
+ </style>     
+    </head>
+    <body>
+      <header class="header">
+        <div class="grid">
+            <div class="header_navbar">
+                <div class="menu_wrap">
+                    <div class="main_menu">
+                        <ul class="menu_list">
+                            <!-- <li class="menu_item">
+                                <a href="/home.html">HOME</a>
+                            </li> -->
+                            <li class="menu_item input_user">
+                              <a href="/input-user-recommend">Recommend Jobs for Input User</a>
+                          </li>
+                          <li class="menu_item choose_user">
+                              <a href="/search">Recommend Jobs for Available UserID</a>
+                          </li>
+                          <li class="menu_item compare_user">
+                              <a href="/compare-user">Compare User</a>
+                          </li>
+                          <li class="menu_item EDA_role">
+                            <a href="/EDA-user-barchart">EDA Frequent Skills</a>
+                        </li>
+                        <li class="menu_item EDA_location">
+                          <a href="/EDA-location">EDA Jobs Locations</a>
+                      </li>
+                      <li class="menu_item EDA_workingtypes">
+                        <a href="/EDA-workingtypes">EDA Jobs Working Types</a>
+                    </li>
+                    <li class="menu_item EDA_working-exp">
+                      <a href="/EDA-year-exp">EDA Users Experience</a>
+                  </li>
+                    <li class="menu_item EDA_education">
+                      <a href="/EDA-user-education">EDA Users Education</a>
+                    </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <div class='myform' flex="left">
+            <form action='/input-user-recommend',role="search" id="form", method="POST">
+              <div class='search_pad'>
+                <div class='search_input'>
+                    <input type="search" id="query" name="userExp" placeholder="User Experience..." aria-label="Search through site content">
+                </div>
+                <div class='search_input'>
+                  <input type="search" id="query" name="userSkills" placeholder="User Skills..." aria-label="Search through site content">
+                </div>
+              </div>
+              <div class='search_button'>
+                <button>
+                  <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        <div align="center" style="padding-left: 10%;padding-right: 10%;"> 
+            <table >
+                <h1>
+                <!--Displaying the converted table-->
+                     {% for table in tables %}
+                    <h2>{{titles[loop.index]}}</h2>                            
+                    {{ table|safe }}
+                    {% endfor %}     
+                </h1> 
+            </table>
+        </div>
+    </body>
+</html>
