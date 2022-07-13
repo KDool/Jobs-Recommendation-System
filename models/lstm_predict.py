@@ -20,6 +20,8 @@ nltk.download('stopwords')
 from nltk.corpus import stopwords
 stop_words = set(stopwords.words('english'))
 from nltk.tokenize import word_tokenize
+# import sys
+# sys.path.append('../')
 
 def clean(desc):
     desc = contractions.fix(desc)
@@ -143,7 +145,7 @@ def get_predictions(desc):
     #clean
     desc = clean(desc)
     #load model
-    model = tf.keras.models.load_model('models/lstm_skill_extractor.h5')
+    model = tf.keras.models.load_model('./lstm_skill_extractor.h5')
     #tokenize and convert to phrases
     phrases = generate_phrases(desc)
     #preprocess unseen data
@@ -173,9 +175,9 @@ def skill_remove_qualifiers(skill = ''):
     import re
     experience_qualifiers = ['previous', 'prior', 'following', 'recent', 'the above', 'past',
                          
-                         'proven', 'demonstrable', 'demonstrated', 'relevant', 'significant', 'practical',
-                         'essential', 'equivalent', 'desirable', 'required', 'considerable', 'similar',
-                         'working', 'specific', 'qualified', 'direct', 'hands on', 'handson', 'hands-on','Hands-on','preferred','languages',
+                         'proven', 'demonstrable', 'demonstrated', 'relevant', 'significant', 'practical','company','strength',
+                         'essential', 'equivalent', 'desirable', 'required', 'considerable', 'similar', 'small','mighty','want','someone','used ',
+                         'working', 'specific', 'qualified', 'direct', 'hands on', 'handson', 'hands-on','Hands-on','preferred','languages','fluency',
                          
                          'strong', 'solid', 'good', 'substantial', 'excellent', 'the right', 'valuable', 'invaluable','nice to have','familiarity ','related '
                          'some', 'none', 'much', 'extensive', 'more','experiences','experience','ability','listed', 'nice to have','knowledge','concepts',
@@ -199,7 +201,11 @@ def normalize_list(skills_list:list):
         if temp_str!='':
             res.append(temp_str)
     res = list(set(res))
-    return res
+    return_list = res.copy()
+    # for i in res:
+    #     if len(i)>30:
+    #         return_list.remove(i)
+    return return_list
 
 
 
