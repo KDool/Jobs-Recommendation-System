@@ -131,12 +131,12 @@ def compare_user():
 def eda_location():
     bar_keys,bar_values = recommend.EDA_on_location(df_jobs)
     print(bar_keys,bar_values)
-    return render_template('eda_location.html',title='EDA Jobs Locations', max=1500,labels=bar_keys, values=bar_values)
+    return render_template('eda_location.html',title='EDA Jobs Locations', max=len(df_jobs),labels=bar_keys, values=bar_values)
 
 @app.route('/EDA-workingtypes')
 def eda_workingtypes():
     bar_keys,bar_values = recommend.EDA_on_working(df_jobs)
-    return render_template('eda_workingtypes.html',title='EDA Jobs Working Types', max=1500,labels=bar_keys, values=bar_values)
+    return render_template('eda_workingtypes.html',title='EDA Jobs Working Types', max=len(df_jobs),labels=bar_keys, values=bar_values)
 
 
 @app.route('/EDA-year-exp')
@@ -145,7 +145,7 @@ def eda_year_exp():
     print(result_dictionary)
     bar_keys = list(result_dictionary.keys())
     bar_values = list(result_dictionary.values())
-    return render_template('eda_experience.html',title='EDA Users Experience By Year', max=2000,labels=bar_keys, values=bar_values)
+    return render_template('eda_experience.html',title='EDA Users Experience By Year', max=len(df_user),labels=bar_keys, values=bar_values)
 
 
 
@@ -155,11 +155,25 @@ def eda_user_education():
     print(result_dictionary)
     bar_keys = list(result_dictionary.keys())
     bar_values = list(result_dictionary.values())
-    return render_template('eda_experience.html',title='EDA Users Education Level', max=5000,labels=bar_keys, values=bar_values)
+    return render_template('eda_experience.html',title='EDA Users Education Level', max=len(df_user_data),labels=bar_keys, values=bar_values)
 
 
 
-
+@app.route('/EDA-skills-extractor',methods=['GET', 'POST'])
+def eda_skills_extractor():
+    text = ''
+    if request.method == 'POST':
+        text = request.form["jd"]
+        result_list = recommend.get_skills(text)
+        column_jd = [text]
+        column_extract = [result_list]
+        df = pd.DataFrame()
+        df['Job Description'] = column_jd
+        df['Extracted Skills'] = column_extract
+        return render_template('skill_extract.html',tables=[df.to_html(render_links=True, escape=False)], titles=['Job Skills Extractor'])
+    else:
+        return render_template('skill_extract.html')
+    # return
 
 
 
