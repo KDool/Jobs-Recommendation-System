@@ -413,6 +413,75 @@ def EDA_education(df_user_skills):
             education_dictionary['NaN'] += 1
     return education_dictionary
 
+
+
+
+def valid_string_in_item(invalid_items:list,string_input=''):
+    result = 0
+    for item in invalid_items:
+        if item in string_input:
+            result = 1
+            return result
+    return result
+
+def filter_advanced_level(skills_list:list):
+    # total_list = []
+    # for i in range(0,len(df)):
+        # check_list = df.iloc[i]['skills'].copy()
+    drop_list = []
+    check_list = skills_list.copy()
+    invalid_string = ['pregnancy','status','gender','vacation','people','sex','salary','month','health','insurance',
+                            'email','inmai','holiday','qualification','monday','tuesday','wednesday','thursday','friday','saturday','sunday']
+    valid_string_list = ['english','japanese','vietnamese','foreign language','data visualization','programming language','docker',
+                            'python','sql','nosql','scrum','agile','data science',' r ','software','javascript','java','scala','data engineer','data scientist',
+                            'business analysis','business analyst','data analysis','data analyst','statistic','big data','data lake','data warehouse','aws','gcp',
+                            'data governance','data analysis','tensorflow','bi tools','power bi','etl','linux','unix','windows','postgresql','mysql','batch','real time',
+                            'data pipeline','software engineer','software engineering','data engineering','data mining']
+
+    for item in skills_list:
+        if ('degree' in item) and (len(item)>len('degree')):
+            s = item.replace('degrees','').replace('degree','').strip()
+            s2 = item.split(' ')
+            check_list.append('degree')
+            check_list.append(s)
+            check_list = check_list + s2
+            check_list.remove(item)
+        else:
+            if valid_string_in_item(invalid_items=invalid_string,string_input = item) == 1:
+                check_list.remove(item)
+
+    check_list = list(set(check_list))
+    check_list_2 = check_list.copy()
+
+    for item in check_list:
+        if item.count(" ")>=3:
+                # print(item)
+            for valid_item in valid_string_list:
+                if valid_item in item:
+                    check_list_2.append(valid_item)
+            check_list_2.remove(item)
+                # print(item)
+            continue
+            
+                # print(item)
+            # if 
+        # print("LENGTH AFTER: ",len(check_list)) 
+    # total_list.append(list(set(check_list_2)))
+    check_list_2 = list(set(check_list_2))
+    return check_list_2
+
+import sys
+sys.path.append('../')
+from models.lstm_predict import predict
+def get_skills(text=''):
+    a = predict(text)
+    result = filter_advanced_level(a)
+    return result
+
+
+
+
+
 def main():
     df_job = load_job_data()
     df_user = load_user_data()
