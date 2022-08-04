@@ -44,9 +44,9 @@ On Linux Cloud server, run the following command:
 
 The username/password to access MongoDB is mongoadmin/admin
 ## Windows Crawler
-- Pull this repository and run the search.py for searching User ID and Job ID
-- run the extract_user.py for crawl user data
-- run the extract_job.py for crawl job data
+- Pull this repository and run the employee.py and jobs.py for searching User ID and Job ID
+- run the extract_skills.ipynb,extract_userProfile.ipynb for crawling user data
+- run the extractJD.ipynb for crawling job data
 
 ## Data Pre-processing
 ##### Clean and extract noun phrases from text.
