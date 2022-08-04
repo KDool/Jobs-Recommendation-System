@@ -2,14 +2,17 @@
 ## Building data analytics and recommendation system for LinkedIn - Tutorial Document
 Tutorial includes 3 sections
 - Setup environments
-- Traning Extract Skills Model with LSTM
-- Deployment
-- Features Usage
+- Data pre-processing
+- Data processing
+- Web Deployment
 
 ## Setup Environments
 #### Environment requirements
+
 - Operating System: 
+
     -- Crawler Servers: Windows 10, 
+    
     -- Web server, MongoDB server: Ubuntu 18.04 LTS
 - Python 3.9, pip3
 - Docker engine
@@ -36,11 +39,14 @@ Tutorial includes 3 sections
 
 ##### MongoDB
 On Linux Cloud server, run the following command: 
+
 ``` docker run -itd --name mongodb -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=admin mongo```
 
 The username/password to access MongoDB is mongoadmin/admin
-##### Windows Crawler
-- Pull this repository and run the crawl.py
+## Windows Crawler
+- Pull this repository and run the search.py for searching User ID and Job ID
+- run the extract_user.py for crawl user data
+- run the extract_job.py for crawl job data
 
 ## Data Pre-processing
 ##### Clean and extract noun phrases from text.
