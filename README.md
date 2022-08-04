@@ -36,7 +36,6 @@ Tutorial includes 3 sections
 
 ##### MongoDB
 On Linux Cloud server, run the following command: 
-
 ``` docker run -itd --name mongodb -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=admin mongo```
 
 The username/password to access MongoDB is mongoadmin/admin
@@ -49,7 +48,7 @@ Pull this repository on Linux machine and run the:  DataPreprocessing/build-NP-t
 
 ## Data Processing    
 ##### Traning Extract Skills Model with LSTM
-- Download the dataset that I have labelled by myself from this [link](http://localhost:8080), and save as CSV file at: output/total_phrases_labelled_train.csv
+- Download the dataset that I have labelled by myself from this [link](https://docs.google.com/spreadsheets/d/1PYIf_HrndDGP9x-XuZNcz6fwzuwv2oXfjbSQrKbWzvY/edit?usp=sharing), and save as CSV file at: output/total_phrases_labelled_train.csv
 - Download pretrained dataset GloVe for English Word Representation from this [link](https://www.kaggle.com/datasets/rtatman/glove-global-vectors-for-word-representation)
 - Training the model by running files: models/lstm.py
 - Model evaluation: models/lstm.ipynb
