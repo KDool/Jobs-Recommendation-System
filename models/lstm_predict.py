@@ -7,7 +7,9 @@ from keras.models import Sequential
 from keras.layers import Embedding, LSTM, Dense, Dropout
 from keras.initializers import Constant
 from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
+#from keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
 from tqdm import tqdm
 from keras.layers import Dense,SpatialDropout1D
 import contractions
