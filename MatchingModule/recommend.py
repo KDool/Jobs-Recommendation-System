@@ -363,17 +363,17 @@ def EDA_workingexp(df_user:pd.DataFrame):
                     sum = sum + months_exp
                     sum += 0
             if sum > (12*60):
-                column_months.append('NaN')
+                column_months.append('Others')
             else:
                 column_months.append(sum/12)
             # print(l)
         else:
-            column_months.append('NaN')
+            column_months.append('Others')
 
     dict_result = dict(collections.Counter(column_months))
-    records_NaN = {'NaN':dict_result['NaN']}
+    records_NaN = {'Others':dict_result['Others']}
     # print(records_NaN)
-    dict_result.pop('NaN')
+    dict_result.pop('Others')
 
 
     dictionary_histogram = {}
@@ -382,7 +382,7 @@ def EDA_workingexp(df_user:pd.DataFrame):
         print(bin_name)
         dictionary_histogram[bin_name] = 0
 
-    dictionary_histogram['NaN'] = records_NaN['NaN']
+    dictionary_histogram['Others'] = records_NaN['Others']
 
     key_values = list(dict_result.keys())
     for item in key_values:
@@ -394,7 +394,7 @@ def EDA_workingexp(df_user:pd.DataFrame):
     return dictionary_histogram
 ##########################################
 def EDA_education(df_user_skills):
-    degree_level = ['degree','bachelors','masters','masters','phd','engineers','associate','researcher','NaN']
+    degree_level = ['degree','bachelors','masters','masters','phd','engineers','associate','researcher','Others']
     education_dictionary = {}
     for i in degree_level:
         education_dictionary[i] = 0
@@ -410,7 +410,7 @@ def EDA_education(df_user_skills):
                     check = 1
                     education_dictionary[item] +=1
         if check == 0:
-            education_dictionary['NaN'] += 1
+            education_dictionary['Others'] += 1
     return education_dictionary
 
 
@@ -435,7 +435,7 @@ def filter_advanced_level(skills_list:list):
     valid_string_list = ['english','japanese','vietnamese','foreign language','data visualization','programming language','docker',
                             'python','sql','nosql','scrum','agile','data science',' r ','software','javascript','java','scala','data engineer','data scientist',
                             'business analysis','business analyst','data analysis','data analyst','statistic','big data','data lake','data warehouse','aws','gcp',
-                            'data governance','data analysis','tensorflow','bi tools','power bi','etl','linux','unix','windows','postgresql','mysql','batch','real time',
+                            'data governance','data analysis','tensorflow','bi tools','power bi','nifi','etl','linux','unix','windows','postgresql','mysql','batch','real time',
                             'data pipeline','software engineer','software engineering','data engineering','data mining']
 
     for item in skills_list:
